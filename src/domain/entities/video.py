@@ -3,6 +3,8 @@ import uuid
 from datetime import datetime
 from typing import Optional
 
+from src.domain.enums.error_messages import ErrorMessagesEnum
+
 
 class VideoEntity:
     """
@@ -68,9 +70,7 @@ class VideoEntity:
             ValueError: If the URL is invalid.
         """
         if not self.URL_REGEX.match(value):
-            raise ValueError(
-                "Invalid URL. The URL must start with 'http' or 'https'."
-            )
+            raise ValueError(ErrorMessagesEnum.INVALID_URL.value)
         self._url = value
 
     @property

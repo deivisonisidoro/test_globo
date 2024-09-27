@@ -1,6 +1,7 @@
-import pytest
 import uuid
 from datetime import datetime
+
+import pytest
 
 from src.domain.entities.video import VideoEntity
 

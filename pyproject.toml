@@ -25,20 +25,26 @@ testpaths = ["tests"]
 pythonpath = ["src"]
 
 [tool.black]
-line-lenght = 79
-include = '\.piy?$'
+line-length = 79
+target-version = ['py38', 'py39']
+include = '\.pyi?$'
 exclude = '''
 /(
-  \.git
- | \.hg
- | \.mypy_cache
- | \.tox
- | \.venv
- | _build
- | buck-out
- | build
- )/
+    \.eggs         # exclude a directory named ".eggs"
+  | \.git          # exclude the ".git" directory
+  | \.hg           # exclude the ".hg" directory
+  | \.mypy_cache   # exclude the ".mypy_cache" directory
+  | \.tox          # exclude the ".tox" directory
+  | \.venv         # exclude the ".venv" directory
+  | _build         # exclude the "_build" directory
+  | buck-out       # exclude the "buck-out" directory
+  | build          # exclude the "build" directory
+  | dist           # exclude the "dist" directory
+)/
 '''
+[tool.isort]
+profile = "black"
+
 [tool.interrogate]
 ignore-init-method = true
 ignore-init-module = false

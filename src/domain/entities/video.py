@@ -68,7 +68,9 @@ class VideoEntity:
             ValueError: If the URL is invalid.
         """
         if not self.URL_REGEX.match(value):
-            raise ValueError("Invalid URL. The URL must start with 'http' or 'https'.")
+            raise ValueError(
+                "Invalid URL. The URL must start with 'http' or 'https'."
+            )
         self._url = value
 
     @property

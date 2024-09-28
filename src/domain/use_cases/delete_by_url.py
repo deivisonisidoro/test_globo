@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+
 from src.domain.dtos.video_response import VideoResponseDTO
 
 

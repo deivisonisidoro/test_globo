@@ -1,9 +1,9 @@
 from src.domain.dtos.video_response import VideoResponseDTO
+from src.domain.enums.error_messages import ErrorMessagesEnum
 from src.domain.exceptions.validation_error.video_not_found_error import (
     VideoNotFoundError,
 )
 from src.domain.repositories.videos import AbstractVideoRepository
-from src.domain.enums.error_messages import ErrorMessagesEnum
 from src.domain.use_cases.delete_by_url import AbstractDeleteVideoByUrlUseCase
 
 

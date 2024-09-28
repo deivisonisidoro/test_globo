@@ -1,10 +1,12 @@
-import pytest
 from unittest.mock import MagicMock
+
+import pytest
+
 from src.application.use_cases.delete_by_url import DeleteVideoByUrlUseCase
+from src.domain.enums.error_messages import ErrorMessagesEnum
 from src.domain.exceptions.validation_error import VideoNotFoundError
 from src.domain.factories.video import VideoFactory
 from src.domain.repositories.videos import AbstractVideoRepository
-from src.domain.enums.error_messages import ErrorMessagesEnum
 
 
 class TestDeleteVideoByUrlUseCase:

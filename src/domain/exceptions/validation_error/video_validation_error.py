@@ -34,31 +34,3 @@ class VideoValidationError(Exception):
                 and message.
         """
         return f"{self.name}: {self.message}"
-
-
-class InvalidUrlError(VideoValidationError):
-    """Exception raised for invalid video URLs.
-
-    This exception is used to indicate that a provided URL does not
-    meet the required format or validation criteria for a video.
-    It is a subclass of VideoValidationError, specifically for URL-related
-    validation issues.
-
-    Attributes:
-        message (str): A description of the error.
-        name (str): The name of the exception type.
-    """
-
-    pass
-
-
-class DuplicateUrlError(VideoValidationError):
-    """Exception raised for duplicate video URLs.
-
-    This exception is used to indicate that a provided URL already exists
-    in the system, and thus cannot be used to create a new video.
-    It is a subclass of VideoValidationError, specifically for duplicate
-    URL-related issues.
-    """
-
-    pass

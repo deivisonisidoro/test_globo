@@ -5,7 +5,9 @@ import pytest
 from src.application.use_cases.create import CreateVideoUseCase
 from src.domain.entities.video import VideoEntity
 from src.domain.enums.error_messages import ErrorMessagesEnum
-from src.domain.exceptions.video_validation_error import DuplicateUrlError
+from src.domain.exceptions.validation_error.duplicate_url_error import (
+    DuplicateUrlError,
+)
 from src.domain.factories.video import VideoFactory
 from src.domain.repositories.videos import AbstractVideoRepository
 
@@ -13,6 +15,7 @@ from src.domain.repositories.videos import AbstractVideoRepository
 class TestCreateVideoUseCase:
     """Test suite for CreateVideoUseCase."""
 
+    @pytest.fixture(autouse=True)
     def setup_method(self):
         """Setup method to initialize test objects."""
         self.video_repository = MagicMock(spec=AbstractVideoRepository)

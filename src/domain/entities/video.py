@@ -4,9 +4,8 @@ from datetime import datetime
 from typing import Optional
 
 from src.domain.enums.error_messages import ErrorMessagesEnum
-from src.domain.exceptions.video_validation_error import (
+from src.domain.exceptions.validation_error.invalid_url_error import (
     InvalidUrlError,
-    VideoValidationError,
 )
 
 

@@ -4,7 +4,7 @@ from datetime import datetime
 import pytest
 
 from src.domain.entities.video import VideoEntity
-from src.domain.exceptions.video_validation_error import InvalidUrlError
+from src.domain.exceptions.validation_error import InvalidUrlError
 
 
 class TestVideoEntity:

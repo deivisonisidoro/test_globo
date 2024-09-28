@@ -1,6 +1,6 @@
 from src.domain.dtos.video_response import VideoResponseDTO
 from src.domain.enums.error_messages import ErrorMessagesEnum
-from src.domain.exceptions.video_validation_error import DuplicateUrlError
+from src.domain.exceptions.validation_error import DuplicateUrlError
 from src.domain.factories.video import VideoFactory
 from src.domain.repositories.videos import AbstractVideoRepository
 from src.domain.use_cases.create import AbstractCreateVideoUseCase
@@ -30,10 +30,10 @@ class CreateVideoUseCase(AbstractCreateVideoUseCase):
             url (str): The URL of the video to create.
 
         Returns:
-            VideoResponseDTO: The DTO containing the status code and created video entity.
+            (VideoResponseDTO): The DTO containing the status code and created video entity.
 
         Raises:
-            InvalidUrlError: If the URL is invalid or a video with the same URL already exists.
+            (InvalidUrlError): If the URL is invalid or a video with the same URL already exists.
         """
         existing_video = self.video_repository.find_by_url(url)
         if existing_video:

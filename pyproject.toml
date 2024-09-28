@@ -27,6 +27,10 @@ build-backend = "poetry.core.masonry.api"
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
+markers = [
+    "integration: mark test as an integration test",
+    "unit: mark test as an unit test"
+]
 
 [tool.black]
 line-length = 79

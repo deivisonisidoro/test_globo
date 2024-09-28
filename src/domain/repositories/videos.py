@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import Optional
+from typing import List, Optional
 
 from src.domain.entities.video import VideoEntity
 
@@ -31,5 +31,14 @@ class AbstractVideoRepository(ABC):
 
         Returns:
             Optional[VideoEntity]: The found video entity or None if not found.
+        """
+        pass
+
+    @abstractmethod
+    def find_all(self) -> List[VideoEntity]:
+        """Finds all videos in the repository.
+
+        Returns:
+            List[VideoEntity]: A list of all video entities in the repository.
         """
         pass

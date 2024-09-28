@@ -42,3 +42,15 @@ class AbstractVideoRepository(ABC):
             List[VideoEntity]: A list of all video entities in the repository.
         """
         pass
+
+    @abstractmethod
+    def delete(self, video: VideoEntity) -> None:
+        """Deletes a video from the repository.
+
+        Args:
+            video (VideoEntity): The video entity to delete.
+
+        Raises:
+            Exception: If an error occurs during deletion.
+        """
+        pass

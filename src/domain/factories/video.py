@@ -28,9 +28,6 @@ class VideoFactory:
 
         Returns:
             VideoEntity: A new instance of VideoEntity.
-
-        Raises:
-            ValueError: If the provided URL is invalid.
         """
         return VideoEntity(
             url=url,

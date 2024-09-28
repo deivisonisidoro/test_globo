@@ -5,6 +5,7 @@ import pytest
 
 from src.domain.entities.video import VideoEntity
 from src.domain.enums.error_messages import ErrorMessagesEnum
+from src.domain.exceptions.video_validation_error import InvalidUrlError
 from src.domain.factories.video import VideoFactory
 
 
@@ -64,14 +65,16 @@ class TestVideoFactory:
 
     def test_invalid_url_raises_error(self):
         """
-        Test that providing an invalid URL raises a ValueError.
+        Test that providing an invalid URL raises a InvalidUrlError.
         """
         invalid_url = "ftp://invalid-url.com"
 
-        with pytest.raises(ValueError) as exc_info:
+        with pytest.raises(InvalidUrlError) as exc_info:
             VideoFactory.create(url=invalid_url)
 
-        assert str(exc_info.value) == ErrorMessagesEnum.INVALID_URL.value
+        assert (
+            str(exc_info.value.message) == ErrorMessagesEnum.INVALID_URL.value
+        )
 
     def test_create_video_with_no_id_generates_uuid(self):
         """

@@ -4,6 +4,7 @@ from datetime import datetime
 import pytest
 
 from src.domain.entities.video import VideoEntity
+from src.domain.exceptions.video_validation_error import InvalidUrlError
 
 
 class TestVideoEntity:
@@ -26,8 +27,8 @@ class TestVideoEntity:
         assert isinstance(video.id, uuid.UUID)
 
     def test_video_entity_url_validation(self):
-        """Test that an invalid URL raises a ValueError."""
-        with pytest.raises(ValueError):
+        """Test that an invalid URL raises a InvalidUrlError."""
+        with pytest.raises(InvalidUrlError):
             VideoEntity(url="invalid_url")
 
     def test_video_entity_manual_id(self):

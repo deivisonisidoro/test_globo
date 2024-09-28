@@ -1,14 +1,12 @@
 from src.domain.dtos.video_response import VideoResponseDTO
 from src.domain.enums.error_messages import ErrorMessagesEnum
-from src.domain.exceptions.video_validation_error import (
-    DuplicateUrlError,
-    InvalidUrlError,
-)
+from src.domain.exceptions.video_validation_error import DuplicateUrlError
 from src.domain.factories.video import VideoFactory
 from src.domain.repositories.videos import AbstractVideoRepository
+from src.domain.use_cases.create import AbstractCreateVideoUseCase
 
 
-class CreateVideoUseCase:
+class CreateVideoUseCase(AbstractCreateVideoUseCase):
     """Use case for video-related operations.
 
     This class encapsulates the business logic for handling video-related actions,

@@ -4,6 +4,10 @@ from datetime import datetime
 from typing import Optional
 
 from src.domain.enums.error_messages import ErrorMessagesEnum
+from src.domain.exceptions.video_validation_error import (
+    InvalidUrlError,
+    VideoValidationError,
+)
 
 
 class VideoEntity:
@@ -34,9 +38,6 @@ class VideoEntity:
             id (Optional[uuid.UUID]): Unique identifier for the video. If None, a UUID will be generated.
             created_at (Optional[datetime]): The creation time of the video. Defaults to the current time.
             updated_at (Optional[datetime]): The last updated time of the video. Defaults to None.
-
-        Raises:
-            ValueError: If the provided URL is invalid.
         """
         self._id = id or uuid.uuid4()
         self.url = url
@@ -67,10 +68,12 @@ class VideoEntity:
             value (str): The new URL of the video. Must be a valid URL starting with http or https.
 
         Raises:
-            ValueError: If the URL is invalid.
+            (InvalidUrlError): If the URL is invalid.
         """
         if not self.URL_REGEX.match(value):
-            raise ValueError(ErrorMessagesEnum.INVALID_URL.value)
+            raise InvalidUrlError(
+                message=ErrorMessagesEnum.INVALID_URL.value, name="InvalidUrl"
+            )
         self._url = value
 
     @property

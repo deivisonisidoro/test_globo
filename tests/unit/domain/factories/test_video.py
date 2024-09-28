@@ -9,6 +9,7 @@ from src.domain.exceptions.validation_error import InvalidUrlError
 from src.domain.factories.video import VideoFactory
 
 
+@pytest.mark.unit
 class TestVideoFactory:
     """
     A test suite for the VideoFactory class using pytest.

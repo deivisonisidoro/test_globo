@@ -7,6 +7,7 @@ from src.domain.entities.video import VideoEntity
 from src.domain.exceptions.validation_error import InvalidUrlError
 
 
+@pytest.mark.unit
 class TestVideoEntity:
     """Test suite for the VideoEntity class."""
 

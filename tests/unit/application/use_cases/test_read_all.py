@@ -11,6 +11,7 @@ from src.domain.factories.video import VideoFactory
 from src.domain.repositories.videos import AbstractVideoRepository
 
 
+@pytest.mark.unit
 class TestReadAllVideosUseCase:
     """Test suite for ReadAllVideosUseCase."""
 

@@ -9,6 +9,7 @@ from src.domain.factories.video import VideoFactory
 from src.domain.repositories.videos import AbstractVideoRepository
 
 
+@pytest.mark.unit
 class TestDeleteVideoByUrlUseCase:
     def setup_method(self):
         """Setup a new instance of DeleteVideoByUrlUseCase for each test."""

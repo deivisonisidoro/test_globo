@@ -1,24 +1,25 @@
 from src.domain.dtos.video_response import VideoResponseDTO
 from src.domain.enums.error_messages import ErrorMessagesEnum
+from src.domain.enums.success_messages import SuccessMessagesEnum
 from src.domain.exceptions.validation_error.video_not_found_error import (
     VideoNotFoundError,
 )
 from src.domain.repositories.videos import AbstractVideoRepository
-from src.domain.use_cases.delete_by_url import AbstractDeleteVideoByUrlUseCase
+from src.domain.use_cases.delete import AbstractDeleteVideoUseCase
 
 
-class DeleteVideoByUrlUseCase(AbstractDeleteVideoByUrlUseCase):
+class DeleteVideoUseCase(AbstractDeleteVideoUseCase):
     """Concrete use case for deleting a video by URL."""
 
     def __init__(self, video_repository: AbstractVideoRepository):
-        """Initializes the DeleteVideoByUrlUseCase.
+        """Initializes the DeleteVideoUseCase.
 
         Args:
             video_repository (AbstractVideoRepository): The repository to delete video entities.
         """
         self.video_repository = video_repository
 
-    def execute(self, url: str) -> VideoResponseDTO:
+    def execute(self, id: str) -> str:
         """Deletes a video by its URL.
 
         Args:
@@ -30,7 +31,7 @@ class DeleteVideoByUrlUseCase(AbstractDeleteVideoByUrlUseCase):
         Raises:
             VideoNotFoundError: If no video with the given URL exists.
         """
-        video = self.video_repository.find_by_url(url)
+        video = self.video_repository.find_by_id(id)
 
         if not video:
             raise VideoNotFoundError(
@@ -40,6 +41,4 @@ class DeleteVideoByUrlUseCase(AbstractDeleteVideoByUrlUseCase):
 
         self.video_repository.delete(video)
 
-        return VideoResponseDTO(
-            status_code=204, data={"message": "Video deleted successfully."}
-        )
+        return SuccessMessagesEnum.VIDEO_DELETED_SUCCESS.value

@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from src.domain.dtos.video_response import VideoResponseDTO
+from src.domain.entities.video import VideoEntity
 
 
 class AbstractCreateVideoUseCase(ABC):
@@ -11,7 +11,7 @@ class AbstractCreateVideoUseCase(ABC):
     """
 
     @abstractmethod
-    def execute(self, url: str) -> VideoResponseDTO:
+    def execute(self, url: str) -> VideoEntity:
         """Abstract method for executing the video operation use case.
 
         Args:

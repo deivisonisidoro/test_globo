@@ -1,4 +1,4 @@
-from src.domain.dtos.video_response import VideoResponseDTO
+from src.domain.entities.video import VideoEntity
 from src.domain.enums.error_messages import ErrorMessagesEnum
 from src.domain.exceptions.validation_error import DuplicateUrlError
 from src.domain.factories.video import VideoFactory
@@ -21,7 +21,7 @@ class CreateVideoUseCase(AbstractCreateVideoUseCase):
         """
         self.video_repository = video_repository
 
-    def execute(self, url: str) -> VideoResponseDTO:
+    def execute(self, url: str) -> VideoEntity:
         """Executes the use case to handle video operations.
 
         This method verifies if a video with the same URL already exists before creating a new one.
@@ -46,4 +46,4 @@ class CreateVideoUseCase(AbstractCreateVideoUseCase):
 
         created_video = self.video_repository.create(new_video)
 
-        return VideoResponseDTO(status_code=201, data=created_video)
+        return created_video

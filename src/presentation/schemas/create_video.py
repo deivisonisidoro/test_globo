@@ -13,6 +13,3 @@ class CreateVideoSchema(BaseModel):
     """
 
     url: str = Field(..., description="Video URL")
-
-    class Config:
-        schema_extra = {"example": {"url": "https://www.example.com/video"}}

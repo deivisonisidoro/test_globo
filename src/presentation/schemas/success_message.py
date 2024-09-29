@@ -21,11 +21,3 @@ class SuccessMessageSchema(BaseModel):
     data: Optional[Any] = Field(
         None, description="Optional data related to the success message"
     )
-
-    class Config:
-        schema_extra = {
-            "example": {
-                "message": "Video created successfully",
-                "data": {"id": 123, "url": "https://www.example.com/video"},
-            }
-        }

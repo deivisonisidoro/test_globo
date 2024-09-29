@@ -16,4 +16,5 @@ class SuccessMessagesEnum(Enum):
     """
 
     VIDEO_CREATED_SUCCESS = "Video created successfully"
+    VIDEOS_LISTED_SUCCESS = "Video listed successfully"
     VIDEO_DELETED_SUCCESS = "Video deleted successfully"

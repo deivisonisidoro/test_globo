@@ -1,4 +1,5 @@
-from src.domain.dtos.video_response import VideoResponseDTO
+from typing import List
+from src.domain.entities.video import VideoEntity
 from src.domain.enums.error_messages import ErrorMessagesEnum
 from src.domain.exceptions.validation_error import VideoNotFoundError
 from src.domain.repositories.videos import AbstractVideoRepository
@@ -19,7 +20,7 @@ class ReadAllVideosUseCase(AbstractReadAllVideosUseCase):
         """
         self.video_repository = video_repository
 
-    def execute(self) -> VideoResponseDTO:
+    def execute(self) -> List[VideoEntity]:
         """Fetches all videos from the repository.
 
         Returns:
@@ -36,4 +37,4 @@ class ReadAllVideosUseCase(AbstractReadAllVideosUseCase):
                 name="VideoNotFoundError",
             )
 
-        return VideoResponseDTO(status_code=200, data=videos)
+        return videos

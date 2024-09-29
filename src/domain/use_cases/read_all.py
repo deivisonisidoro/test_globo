@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List
 
-from src.domain.dtos.video_response import VideoResponseDTO
+from src.domain.entities.video import VideoEntity
 
 
 class AbstractReadAllVideosUseCase(ABC):
@@ -11,7 +11,7 @@ class AbstractReadAllVideosUseCase(ABC):
     """
 
     @abstractmethod
-    def execute(self) -> List[VideoResponseDTO]:
+    def execute(self) -> List[VideoEntity]:
         """Abstract method for retrieving all videos.
 
         This method should be implemented by subclasses to return a list of videos.

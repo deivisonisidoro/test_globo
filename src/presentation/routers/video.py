@@ -1,3 +1,4 @@
+from typing import List
 from uuid import UUID
 
 from fastapi import APIRouter, Depends, status
@@ -5,6 +6,7 @@ from pytest import Session
 
 from src.application.use_cases.create import CreateVideoUseCase
 from src.application.use_cases.delete import DeleteVideoUseCase
+from src.application.use_cases.read_all import ReadAllVideosUseCase
 from src.domain.enums.success_messages import SuccessMessagesEnum
 from src.infrastructure.database.connection import get_db
 from src.infrastructure.repositories.video import VideoRepository
@@ -48,10 +50,42 @@ def create_video(video: CreateVideoSchema, db: Session = Depends(get_db)):
     repository = VideoRepository(session=db)
     use_case = CreateVideoUseCase(video_repository=repository)
     created_video = use_case.execute(video.url)
-    response_data = {
-        "message": SuccessMessagesEnum.VIDEO_CREATED_SUCCESS.value,
-        "data": {"id": created_video.id, "url": created_video.url},
-    }
+    response_data = SuccessMessageSchema(
+        message=SuccessMessagesEnum.VIDEO_CREATED_SUCCESS.value,
+        data={"id": created_video.id, "url": created_video.url},
+    )
+    return response_data
+
+
+@router.get(
+    "/",
+    status_code=status.HTTP_200_OK,
+    summary="Read all videos",
+    description="Retrieve all videos from the database.",
+    response_model=SuccessMessageSchema,
+)
+def read_all_videos(db: Session = Depends(get_db)):
+    """
+    Retrieves all videos from the database.
+
+    This endpoint fetches all videos stored in the database and returns
+    only the 'id' and 'url' fields of each video in the response data.
+
+    Args:
+        db (Session, optional): The database session dependency, provided by FastAPI's Depends.
+
+    Returns:
+        (dict): A response containing a success message and a list of video objects with 'id' and 'url' fields.
+    """
+    repository = VideoRepository(session=db)
+    use_case = ReadAllVideosUseCase(video_repository=repository)
+    videos = use_case.execute()
+    videos_data = [{"id": video.id, "url": video.url} for video in videos]
+    response_data = SuccessMessageSchema(
+        message=SuccessMessagesEnum.VIDEOS_LISTED_SUCCESS.value,
+        data=videos_data,
+    )
+
     return response_data
 
 
@@ -74,7 +108,7 @@ def delete_video(video_id: UUID, db: Session = Depends(get_db)):
         db (Session, optional): The database session dependency, provided by FastAPI's Depends.
 
     Returns:
-        (str): A response with no content (204).
+        (None): A response with no content (204).
     """
     repository = VideoRepository(session=db)
     use_case = DeleteVideoUseCase(video_repository=repository)

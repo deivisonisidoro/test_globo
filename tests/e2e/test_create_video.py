@@ -3,6 +3,7 @@ from fastapi import status
 from fastapi.testclient import TestClient
 
 from src.domain.enums.error_messages import ErrorMessagesEnum
+from src.domain.enums.success_messages import SuccessMessagesEnum
 from src.presentation.schemas.create_video import CreateVideoSchema
 
 
@@ -41,7 +42,10 @@ class TestCreateVideo:
         assert response.status_code == status.HTTP_201_CREATED
 
         response_data = response.json()
-        assert response_data["message"] == "Video created successfully"
+        assert (
+            response_data["message"]
+            == SuccessMessagesEnum.VIDEO_CREATED_SUCCESS.value
+        )
         assert response_data["data"]["url"] == video_data.url
 
     def test_create_duplicate_video(self, client: TestClient):

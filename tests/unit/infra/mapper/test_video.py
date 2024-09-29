@@ -1,5 +1,6 @@
-import pytest
 from datetime import datetime
+
+import pytest
 
 from src.domain.entities.video import VideoEntity
 from src.infrastructure.database.models.video import VideoModel

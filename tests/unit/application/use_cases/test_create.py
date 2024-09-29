@@ -34,7 +34,7 @@ class TestCreateVideoUseCase:
 
         self.video_repository.find_by_url.assert_called_once_with(url)
         self.video_repository.create.assert_called_once()
-        assert created_video.data.url == expected_video.url
+        assert created_video.url == expected_video.url
 
     def test_execute_raises_invalid_url_error_on_duplicate_url(self):
         """Test that an DuplicateUrlError is raised for duplicate URLs."""

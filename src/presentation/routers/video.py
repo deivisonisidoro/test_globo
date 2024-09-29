@@ -1,7 +1,11 @@
+from uuid import UUID
+
 from fastapi import APIRouter, Depends, status
 from pytest import Session
 
 from src.application.use_cases.create import CreateVideoUseCase
+from src.application.use_cases.delete import DeleteVideoUseCase
+from src.domain.enums.success_messages import SuccessMessagesEnum
 from src.infrastructure.database.connection import get_db
 from src.infrastructure.repositories.video import VideoRepository
 from src.presentation.schemas.create_video import CreateVideoSchema
@@ -45,7 +49,35 @@ def create_video(video: CreateVideoSchema, db: Session = Depends(get_db)):
     use_case = CreateVideoUseCase(video_repository=repository)
     created_video = use_case.execute(video.url)
     response_data = {
-        "message": "Video created successfully",
-        "data": {"url": created_video.url},
+        "message": SuccessMessagesEnum.VIDEO_CREATED_SUCCESS.value,
+        "data": {"id": created_video.id, "url": created_video.url},
     }
     return response_data
+
+
+@router.delete(
+    "/{video_id}",
+    status_code=status.HTTP_204_NO_CONTENT,
+    summary="Delete a video",
+    description="Delete a video from the database by its ID.",
+)
+def delete_video(video_id: UUID, db: Session = Depends(get_db)):
+    """
+    Deletes a video entry from the database.
+
+    This endpoint allows the user to delete a video by providing
+    the unique video ID in the request path. If the video is
+    successfully deleted, a 204 No Content response is returned.
+
+    Args:
+        video_id (str): The unique identifier of the video to be deleted.
+        db (Session, optional): The database session dependency, provided by FastAPI's Depends.
+
+    Returns:
+        (str): A response with no content (204).
+    """
+    repository = VideoRepository(session=db)
+    use_case = DeleteVideoUseCase(video_repository=repository)
+    use_case.execute(id=video_id)
+
+    return None

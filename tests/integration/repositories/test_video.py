@@ -48,6 +48,17 @@ class TestVideoRepository:
         assert found_video is not None
         assert found_video.url == "https://example.com/video2"
 
+    def test_find_by_id(self, video_repository):
+        """
+        Tests the retrieval of a video by URL in the database.
+        """
+        video = VideoFactory.create(url="https://example.com/video2")
+        video_repository.create(video)
+
+        found_video = video_repository.find_by_id(video.id)
+        assert found_video is not None
+        assert found_video.url == "https://example.com/video2"
+
     def test_find_all_videos(self, video_repository):
         """
         Tests the retrieval of all videos in the database.

@@ -35,6 +35,18 @@ class AbstractVideoRepository(ABC):
         pass
 
     @abstractmethod
+    def find_by_id(self, id: str) -> Optional[VideoEntity]:
+        """Finds a video by ID.
+
+        Args:
+            id (str): The ID of the video to find.
+
+        Returns:
+            Optional[VideoEntity]: The found video entity or None if not found.
+        """
+        pass
+
+    @abstractmethod
     def find_all(self) -> List[VideoEntity]:
         """Finds all videos in the repository.
 

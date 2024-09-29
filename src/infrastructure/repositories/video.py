@@ -57,6 +57,21 @@ class VideoRepository(AbstractVideoRepository):
             return VideoMapper.to_entity(video_model)
         return None
 
+    def find_by_id(self, id: str) -> Optional[VideoEntity]:
+        """
+        Finds a video by its Id in the database.
+
+        Args:
+            id (str): The Id of the video to find.
+
+        Returns:
+            Optional[VideoEntity]: The found video entity or None if not found.
+        """
+        video_model = self.session.query(VideoModel).filter_by(id=id).first()
+        if video_model:
+            return VideoMapper.to_entity(video_model)
+        return None
+
     def find_all(self) -> List[VideoEntity]:
         """
         Retrieves all video entities from the database.

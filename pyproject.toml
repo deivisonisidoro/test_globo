@@ -30,7 +30,8 @@ testpaths = ["tests"]
 pythonpath = ["src"]
 markers = [
     "integration: mark test as an integration test",
-    "unit: mark test as an unit test"
+    "unit: mark test as an unit test",
+    "e2e: mark test as an e2e test"
 ]
 
 [tool.black]

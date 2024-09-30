@@ -3,8 +3,9 @@
 
 import React, { useState, useEffect } from "react";
 import PageContainer from "@/components/page-container";
-import { deleteVideo, listVideos } from "@/services/api/videos";
-import { Play, Trash2 } from "lucide-react"; // Importe os ícones Play e Trash2 da biblioteca Lucide
+import { listVideos, deleteVideo } from "@/services/api/videos"; // Importe a função deleteVideo
+import { Play, Trash2 } from "lucide-react";
+import Snackbar from "@/components/snack-bar"; // Importe o componente Snackbar
 
 interface Video {
   id: string;
@@ -16,6 +17,7 @@ const Home: React.FC = () => {
   const [currentVideoUrl, setCurrentVideoUrl] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [snackbarVisible, setSnackbarVisible] = useState(false);
 
   useEffect(() => {
     const fetchVideos = async () => {
@@ -24,10 +26,11 @@ const Home: React.FC = () => {
 
       try {
         const videoList = await listVideos();
-        setVideos(videoList.data); // Presume que videoList seja um array de objetos de vídeo
+        setVideos(videoList.data);
       } catch (error) {
         if (error instanceof Error) {
           setErrorMessage(error.message);
+          setSnackbarVisible(true);
         } else {
           setErrorMessage("An unknown error occurred");
         }
@@ -54,11 +57,17 @@ const Home: React.FC = () => {
       setVideos((prevVideos) => prevVideos.filter((video) => video.id !== videoId)); // Atualiza a lista local
     } catch (error) {
       if (error instanceof Error) {
-        setErrorMessage(error.message);
+        setErrorMessage("Erro ao deletar vídeo");
+        setSnackbarVisible(true);
       } else {
         setErrorMessage("An unknown error occurred");
       }
-    } 
+    }
+  };
+
+  const closeSnackbar = () => {
+    setSnackbarVisible(false);
+    setErrorMessage(""); // Limpa a mensagem de erro ao fechar
   };
 
   return (
@@ -126,6 +135,11 @@ const Home: React.FC = () => {
             ></iframe>
           </div>
         </div>
+      )}
+
+      {/* Snackbar para mostrar mensagens de erro */}
+      {snackbarVisible && (
+        <Snackbar message={errorMessage} onClose={closeSnackbar} />
       )}
     </PageContainer>
   );

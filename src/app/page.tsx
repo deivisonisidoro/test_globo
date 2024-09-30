@@ -3,8 +3,8 @@
 
 import React, { useState, useEffect } from "react";
 import PageContainer from "@/components/page-container";
-import { listVideos } from "@/services/api/videos";
-import { Play } from "lucide-react"; // Importe o ícone Play da biblioteca Lucide
+import { deleteVideo, listVideos } from "@/services/api/videos";
+import { Play, Trash2 } from "lucide-react"; // Importe os ícones Play e Trash2 da biblioteca Lucide
 
 interface Video {
   id: string;
@@ -39,7 +39,6 @@ const Home: React.FC = () => {
     fetchVideos();
   }, []);
 
-  // Função para extrair o videoId da URL
   const getVideoId = (url: string) => {
     const urlObj = new URL(url);
     return urlObj.searchParams.get("v");
@@ -49,12 +48,24 @@ const Home: React.FC = () => {
     setCurrentVideoUrl(url);
   };
 
+  const handleDeleteVideo = async (videoId: string) => {
+    try {
+      await deleteVideo(videoId); // Chama a função deleteVideo
+      setVideos((prevVideos) => prevVideos.filter((video) => video.id !== videoId)); // Atualiza a lista local
+    } catch (error) {
+      if (error instanceof Error) {
+        setErrorMessage(error.message);
+      } else {
+        setErrorMessage("An unknown error occurred");
+      }
+    } 
+  };
+
   return (
     <PageContainer>
       <h1 className="text-3xl font-bold mb-6 text-center">Lista de Vídeos</h1>
 
       {loading && <p>Carregando vídeos...</p>}
-      {errorMessage && <p className="text-red-500">{errorMessage}</p>}
 
       {!loading && videos.length === 0 && (
         <p className="text-gray-500 text-center text-xl mt-20">
@@ -87,6 +98,13 @@ const Home: React.FC = () => {
                     <Play className="w-6 h-6" />
                   </button>
                 </div>
+                <button
+                  className="text-red-600 hover:text-red-700"
+                  onClick={() => handleDeleteVideo(video.id)}
+                  aria-label={`Deletar vídeo ${videoId}`}
+                >
+                  <Trash2 className="w-6 h-6" />
+                </button>
               </div>
             );
           })}
@@ -102,6 +120,7 @@ const Home: React.FC = () => {
               className="absolute top-0 left-0 w-full h-full"
               src={currentVideoUrl.replace("watch?v=", "embed/")}
               title="YouTube video player"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>

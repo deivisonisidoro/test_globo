@@ -6,6 +6,7 @@ import PageContainer from "@/components/page-container";
 import { listVideos, deleteVideo } from "@/services/api/videos"; // Importe a função deleteVideo
 import { Play, Trash2 } from "lucide-react";
 import Snackbar from "@/components/snack-bar"; // Importe o componente Snackbar
+import VideoDialog from "@/components/videp-dialog";
 
 interface Video {
   id: string;
@@ -18,6 +19,7 @@ const Home: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [snackbarVisible, setSnackbarVisible] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false); // Adicionado estado para controlar o modal
 
   useEffect(() => {
     const fetchVideos = async () => {
@@ -49,6 +51,7 @@ const Home: React.FC = () => {
 
   const handlePlayVideo = (url: string) => {
     setCurrentVideoUrl(url);
+    setModalOpen(true);
   };
 
   const handleDeleteVideo = async (videoId: string) => {
@@ -68,6 +71,11 @@ const Home: React.FC = () => {
   const closeSnackbar = () => {
     setSnackbarVisible(false);
     setErrorMessage(""); // Limpa a mensagem de erro ao fechar
+  };
+
+  const closeModal = () => {
+    setModalOpen(false); 
+    setCurrentVideoUrl(null);
   };
 
   return (
@@ -120,27 +128,24 @@ const Home: React.FC = () => {
         </div>
       )}
 
-      {/* Reprodutor de vídeo */}
-      {currentVideoUrl && (
-        <div className="w-full max-w-xl mt-6">
-          <h2 className="text-2xl font-semibold mb-4">Reproduzindo Vídeo:</h2>
+      
+      {snackbarVisible && (
+        <Snackbar message={errorMessage} onClose={closeSnackbar} />
+      )}
+
+      <VideoDialog isOpen={!!modalOpen} onClose={closeModal}>
+        {currentVideoUrl && (
           <div className="relative pb-[56.25%] h-0 overflow-hidden">
             <iframe
               className="absolute top-0 left-0 w-full h-full"
               src={currentVideoUrl.replace("watch?v=", "embed/")}
               title="YouTube video player"
-              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
           </div>
-        </div>
-      )}
-
-      {/* Snackbar para mostrar mensagens de erro */}
-      {snackbarVisible && (
-        <Snackbar message={errorMessage} onClose={closeSnackbar} />
-      )}
+        )}
+      </VideoDialog>
     </PageContainer>
   );
 };

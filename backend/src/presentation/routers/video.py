@@ -36,7 +36,7 @@ def create_video(video: CreateVideoSchema, db: Session = Depends(get_db)):
         db (Session, optional): The database session dependency, provided by FastAPI's Depends.
 
     Returns:
-        dict: A response containing a success message and the created video's URL in the data field.
+        (dict): A response containing a success message and the created video's URL in the data field.
 
     Example:
         Response:

@@ -23,7 +23,7 @@ class DeleteVideoUseCase(AbstractDeleteVideoUseCase):
         """Deletes a video by its URL.
 
         Args:
-            url (str): The URL of the video to delete.
+            id (str): The ID of the video to delete.
 
         Returns:
             VideoResponseDTO: The DTO containing the status code and message.

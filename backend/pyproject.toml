@@ -11,7 +11,10 @@ alembic = "^1.13.3"
 psycopg2-binary = "^2.9.9"
 python-dotenv = "^1.0.1"
 fastapi = {extras = ["standard"], version = "^0.115.0"}
-
+mkdocs = "^1.6.1"
+mkdocstrings = {extras = ["python"], version = "^0.26.1"}
+mkdocs-material = "^9.5.39"
+mkdocs-awesome-pages-plugin = "^2.9.3"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.3"

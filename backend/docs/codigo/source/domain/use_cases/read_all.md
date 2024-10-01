@@ -1,0 +1,1 @@
+::: src.domain.use_cases.read_all

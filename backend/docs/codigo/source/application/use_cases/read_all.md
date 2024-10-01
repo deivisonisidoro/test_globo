@@ -1,0 +1,1 @@
+::: src.application.use_cases.read_all

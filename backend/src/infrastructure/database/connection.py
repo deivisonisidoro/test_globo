@@ -22,7 +22,7 @@ def get_db():
     is completed.
 
     Yields:
-        SessionLocal: The database session object.
+        (SessionLocal): The database session object.
     """
     db = SessionLocal()
     try:

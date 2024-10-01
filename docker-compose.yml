@@ -19,42 +19,40 @@ services:
     container_name: nextjs_app
     build:
       context: ./frontend 
-      dockerfile: Dockerfile  # Verifique se o Dockerfile está nomeado corretamente
+      dockerfile: Dockerfile
     environment:
       NEXT_PUBLIC_API_URL: http://fastapi:8080
     ports:
       - "8081:3000"
     networks:
       - app-network
-    volumes:
-      - ./frontend:/app  # Certifique-se de que o caminho está correto
 
   fastapi:
     container_name: fastapi_app
     build:
       context: ./backend
-      dockerfile: Dockerfile  # Verifique se o Dockerfile está nomeado corretamente
+      dockerfile: Dockerfile
     environment:
       DATABASE_URL: postgresql://postgres:password@db/mydatabase
     ports:
       - "8080:8080"
     depends_on:
-      - db  # Espera o banco de dados estar pronto
+      - db
     networks:
       - app-network
     volumes:
-      - ./backend:/app  # Certifique-se de que o caminho está correto
+      - ./backend:/app
     command: sh -c "alembic upgrade head && fastapi run src/presentation/main.py --port 8080"
 
   nginx:
-    container_name: nginx_app  # Adicionado um nome de contêiner
+    container_name: nginx_app
     depends_on:
       - fastapi
       - nextjs
     restart: always
     build: 
-      context: ./nginx  # Mantenha isso apontando para o diretório correto
-      dockerfile: Dockerfile  # Verifique se o Dockerfile está nomeado corretamente
+      context: ./nginx
+      dockerfile: Dockerfile
     ports:
       - "3050:80"
     networks:

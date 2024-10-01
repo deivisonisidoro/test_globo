@@ -44,7 +44,7 @@ services:
       - app-network
     volumes:
       - ./backend:/app  # Certifique-se de que o caminho está correto
-    command: sh -c "alembic upgrade head && fastapi run src/presentation/main.py --port 8080" 
+    command: sh -c "alembic upgrade head && fastapi run src/presentation/main.py --port 8080"
 
   nginx:
     container_name: nginx_app  # Adicionado um nome de contêiner

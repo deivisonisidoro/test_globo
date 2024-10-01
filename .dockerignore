@@ -1,0 +1,37 @@
+# Ignore Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore virtual environments
+venv/
+.venv/
+
+# Ignore Poetry virtual environment directory (if applicable)
+poetry.lock
+poetry.toml
+
+# Ignore environment and config files
+.env
+*.env
+
+# Ignore git-related files
+.git/
+.gitignore
+
+# Ignore Docker-related files
+Dockerfile
+.dockerignore
+
+# Ignore editor and OS-generated files
+*.swp
+*~
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Ignore logs and other temporary files
+*.log
+logs/
+tmp/

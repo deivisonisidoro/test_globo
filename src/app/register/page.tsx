@@ -7,8 +7,12 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
 import { videoSchema } from "./schema";
-import { Schema } from "./@types/video-form-data";
+
 import { addVideo } from "@/services/api/videos"; // Importa a função da API
+import { z } from "zod";
+
+
+export type Schema = z.infer<typeof videoSchema>
 
 const Register: React.FC = () => {
   const [loading, setLoading] = useState(false);

@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../../../application/use_cases/read_all/">
+        <link rel="prev" href="../../../source/presentation/schemas/success_message/">
       
       
-        <link rel="next" href="../../enums/error_messages/">
+        <link rel="next" href="../test_delete_video/">
       
       
-      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
     
     
       
-        <title>Video - Teste Globo</title>
+        <title>Create video - Teste Globo</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8c3ca2c6.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,11 +46,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mermaid@8.8.4/dist/mermaid.min.css">
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#src.domain.entities.video" class="md-skip">
+        <a href="#tests.e2e.test_create_video" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -92,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href="../../../../.." title="Teste Globo" class="md-header__button md-logo" aria-label="Teste Globo" data-md-component="logo">
+    <a href="../../../.." title="Teste Globo" class="md-header__button md-logo" aria-label="Teste Globo" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Video
+              Create video
             
           </span>
         </div>
@@ -225,7 +225,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="Teste Globo" class="md-nav__button md-logo" aria-label="Teste Globo" data-md-component="logo">
+    <a href="../../../.." title="Teste Globo" class="md-nav__button md-logo" aria-label="Teste Globo" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -255,7 +255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -275,7 +275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../architecture/" class="md-nav__link">
+      <a href="../../../../architecture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -329,19 +329,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -355,7 +353,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             Source
@@ -439,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../application/use_cases/create/" class="md-nav__link">
+      <a href="../../../source/application/use_cases/create/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -460,7 +458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../application/use_cases/delete/" class="md-nav__link">
+      <a href="../../../source/application/use_cases/delete/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -481,7 +479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../application/use_cases/read_all/" class="md-nav__link">
+      <a href="../../../source/application/use_cases/read_all/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -515,19 +513,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2" >
         
           
           <label class="md-nav__link" for="__nav_3_1_2" id="__nav_3_1_2_label" tabindex="0">
@@ -541,7 +537,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1_2">
             <span class="md-nav__icon md-icon"></span>
             Domain
@@ -552,19 +548,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2_1" >
         
           
           <label class="md-nav__link" for="__nav_3_1_2_1" id="__nav_3_1_2_1_label" tabindex="0">
@@ -578,7 +572,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1_2_1">
             <span class="md-nav__icon md-icon"></span>
             Entities
@@ -589,28 +583,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Video
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../source/domain/entities/video/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -619,102 +595,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#src.domain.entities.video" class="md-nav__link">
-    <span class="md-ellipsis">
-      video
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#src.domain.entities.video.VideoEntity" class="md-nav__link">
-    <span class="md-ellipsis">
-      VideoEntity
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="VideoEntity">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#src.domain.entities.video.VideoEntity.created_at" class="md-nav__link">
-    <span class="md-ellipsis">
-      created_at
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#src.domain.entities.video.VideoEntity.id" class="md-nav__link">
-    <span class="md-ellipsis">
-      id
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#src.domain.entities.video.VideoEntity.updated_at" class="md-nav__link">
-    <span class="md-ellipsis">
-      updated_at
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#src.domain.entities.video.VideoEntity.url" class="md-nav__link">
-    <span class="md-ellipsis">
-      url
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#src.domain.entities.video.VideoEntity.__init__" class="md-nav__link">
-    <span class="md-ellipsis">
-      __init__
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#src.domain.entities.video.VideoEntity.__repr__" class="md-nav__link">
-    <span class="md-ellipsis">
-      __repr__
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -770,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../enums/error_messages/" class="md-nav__link">
+      <a href="../../../source/domain/enums/error_messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -791,7 +671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../enums/success_messages/" class="md-nav__link">
+      <a href="../../../source/domain/enums/success_messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -855,7 +735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factories/video/" class="md-nav__link">
+      <a href="../../../source/domain/factories/video/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -919,7 +799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../repositories/video/" class="md-nav__link">
+      <a href="../../../source/domain/repositories/video/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -983,7 +863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../use_cases/create/" class="md-nav__link">
+      <a href="../../../source/domain/use_cases/create/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1004,7 +884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../use_cases/delete/" class="md-nav__link">
+      <a href="../../../source/domain/use_cases/delete/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1025,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../use_cases/read_all/" class="md-nav__link">
+      <a href="../../../source/domain/use_cases/read_all/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1132,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../infrastructure/database/connection/" class="md-nav__link">
+      <a href="../../../source/infrastructure/database/connection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1188,7 +1068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../infrastructure/database/models/connection/" class="md-nav__link">
+      <a href="../../../source/infrastructure/database/models/connection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1260,7 +1140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../infrastructure/mappers/video/" class="md-nav__link">
+      <a href="../../../source/infrastructure/mappers/video/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1324,7 +1204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../infrastructure/repositories/video/" class="md-nav__link">
+      <a href="../../../source/infrastructure/repositories/video/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1431,7 +1311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../presentation/handlers/exception_handlers/" class="md-nav__link">
+      <a href="../../../source/presentation/handlers/exception_handlers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1495,7 +1375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../presentation/routers/video/" class="md-nav__link">
+      <a href="../../../source/presentation/routers/video/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1559,7 +1439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../presentation/schemas/create_video/" class="md-nav__link">
+      <a href="../../../source/presentation/schemas/create_video/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1580,7 +1460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../presentation/schemas/success_message/" class="md-nav__link">
+      <a href="../../../source/presentation/schemas/success_message/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1622,17 +1502,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -1646,7 +1528,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             Tests
@@ -1657,17 +1539,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
@@ -1681,7 +1565,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2_1">
             <span class="md-nav__icon md-icon"></span>
             E2e
@@ -1692,10 +1576,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../tests/e2e/create_video/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Create video
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1704,6 +1606,84 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tests.e2e.test_create_video" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_create_video
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tests.e2e.test_create_video.TestCreateVideo" class="md-nav__link">
+    <span class="md-ellipsis">
+      TestCreateVideo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TestCreateVideo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tests.e2e.test_create_video.TestCreateVideo.test_create_duplicate_video" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_create_duplicate_video
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tests.e2e.test_create_video.TestCreateVideo.test_create_video" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_create_video
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tests.e2e.test_create_video.TestCreateVideo.test_create_video_invalid_url" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_create_video_invalid_url
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tests.e2e.test_create_video.TestCreateVideo.test_create_video_without_url" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_create_video_without_url
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1716,7 +1696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tests/e2e/test_delete_video/" class="md-nav__link">
+      <a href="../test_delete_video/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1737,7 +1717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tests/e2e/test_read_all/" class="md-nav__link">
+      <a href="../test_read_all/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1836,7 +1816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tests/integration/repositories/test_video/" class="md-nav__link">
+      <a href="../../integration/repositories/test_video/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1978,7 +1958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tests/unit/application/use_cases/test_create/" class="md-nav__link">
+      <a href="../../unit/application/use_cases/test_create/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1999,7 +1979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tests/unit/application/use_cases/test_delete/" class="md-nav__link">
+      <a href="../../unit/application/use_cases/test_delete/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2020,7 +2000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tests/unit/application/use_cases/test_read_all/" class="md-nav__link">
+      <a href="../../unit/application/use_cases/test_read_all/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2127,7 +2107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tests/unit/domain/entities/test_videos/" class="md-nav__link">
+      <a href="../../unit/domain/entities/test_videos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2191,7 +2171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tests/unit/domain/factories/test_video/" class="md-nav__link">
+      <a href="../../unit/domain/factories/test_video/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2298,7 +2278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tests/unit/infrastructure/mapper/test_video/" class="md-nav__link">
+      <a href="../../unit/infrastructure/mapper/test_video/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2376,73 +2356,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#src.domain.entities.video" class="md-nav__link">
+  <a href="#tests.e2e.test_create_video" class="md-nav__link">
     <span class="md-ellipsis">
-      video
+      test_create_video
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.domain.entities.video.VideoEntity" class="md-nav__link">
+  <a href="#tests.e2e.test_create_video.TestCreateVideo" class="md-nav__link">
     <span class="md-ellipsis">
-      VideoEntity
+      TestCreateVideo
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="VideoEntity">
+    <nav class="md-nav" aria-label="TestCreateVideo">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#src.domain.entities.video.VideoEntity.created_at" class="md-nav__link">
+  <a href="#tests.e2e.test_create_video.TestCreateVideo.test_create_duplicate_video" class="md-nav__link">
     <span class="md-ellipsis">
-      created_at
+      test_create_duplicate_video
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.domain.entities.video.VideoEntity.id" class="md-nav__link">
+  <a href="#tests.e2e.test_create_video.TestCreateVideo.test_create_video" class="md-nav__link">
     <span class="md-ellipsis">
-      id
+      test_create_video
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.domain.entities.video.VideoEntity.updated_at" class="md-nav__link">
+  <a href="#tests.e2e.test_create_video.TestCreateVideo.test_create_video_invalid_url" class="md-nav__link">
     <span class="md-ellipsis">
-      updated_at
+      test_create_video_invalid_url
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.domain.entities.video.VideoEntity.url" class="md-nav__link">
+  <a href="#tests.e2e.test_create_video.TestCreateVideo.test_create_video_without_url" class="md-nav__link">
     <span class="md-ellipsis">
-      url
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#src.domain.entities.video.VideoEntity.__init__" class="md-nav__link">
-    <span class="md-ellipsis">
-      __init__
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#src.domain.entities.video.VideoEntity.__repr__" class="md-nav__link">
-    <span class="md-ellipsis">
-      __repr__
+      test_create_video_without_url
     </span>
   </a>
   
@@ -2471,13 +2433,13 @@
   
 
 
-  <h1>Video</h1>
+  <h1>Create video</h1>
 
 <div class="doc doc-object doc-module">
 
 
 
-<a id="src.domain.entities.video"></a>
+<a id="tests.e2e.test_create_video"></a>
     <div class="doc doc-contents first">
 
 
@@ -2495,8 +2457,8 @@
 
 
 
-<h2 id="src.domain.entities.video.VideoEntity" class="doc doc-heading">
-            <code>VideoEntity</code>
+<h2 id="tests.e2e.test_create_video.TestCreateVideo" class="doc doc-heading">
+            <code>TestCreateVideo</code>
 
 
 </h2>
@@ -2505,7 +2467,11 @@
     <div class="doc doc-contents ">
 
 
-        <p>A class representing a video entity.</p>
+        <p>End-to-end tests for the video creation feature in the FastAPI application.</p>
+<p>This class contains test cases to verify the behavior of the
+video creation endpoint. It ensures that the API correctly
+handles the creation of a new video and returns the expected
+response when provided with valid data.</p>
 
 
 <p><span class="doc-section-title">Attributes:</span></p>
@@ -2519,46 +2485,14 @@
       </thead>
       <tbody>
           <tr class="doc-section-item">
-            <td><code><a class="autorefs autorefs-internal" title="src.domain.entities.video.VideoEntity.id" href="#src.domain.entities.video.VideoEntity.id">id</a></code></td>
+            <td><code><span title="tests.e2e.test_create_video.TestCreateVideo.client">client</span></code></td>
             <td>
-                  <code><span title="typing.Optional">Optional</span>[<span title="uuid.UUID">UUID</span>]</code>
+                  <code><span title="fastapi.testclient.TestClient">TestClient</span></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Unique identifier for the video. Defaults to None, will generate a UUID if not provided.</p>
-              </div>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code><a class="autorefs autorefs-internal" title="src.domain.entities.video.VideoEntity.url" href="#src.domain.entities.video.VideoEntity.url">url</a></code></td>
-            <td>
-                  <code>str</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>URL of the video. Required field.</p>
-              </div>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code><a class="autorefs autorefs-internal" title="src.domain.entities.video.VideoEntity.created_at" href="#src.domain.entities.video.VideoEntity.created_at">created_at</a></code></td>
-            <td>
-                  <code><span title="typing.Optional">Optional</span>[<span title="datetime.datetime">datetime</span>]</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>Date and time when the video was created. Defaults to the current time.</p>
-              </div>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code><a class="autorefs autorefs-internal" title="src.domain.entities.video.VideoEntity.updated_at" href="#src.domain.entities.video.VideoEntity.updated_at">updated_at</a></code></td>
-            <td>
-                  <code><span title="typing.Optional">Optional</span>[<span title="datetime.datetime">datetime</span>]</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>Date and time when the video was last updated. Defaults to None.</p>
+                <p>A FastAPI test client used for making
+                 requests to the API.</p>
               </div>
             </td>
           </tr>
@@ -2566,8 +2500,10 @@
     </table>
 
               <details class="quote">
-                <summary>Source code in <code>src/domain/entities/video.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-12"> 12</a></span>
+                <summary>Source code in <code>tests/e2e/test_create_video.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-10"> 10</a></span>
+<span class="normal"><a href="#__codelineno-0-11"> 11</a></span>
+<span class="normal"><a href="#__codelineno-0-12"> 12</a></span>
 <span class="normal"><a href="#__codelineno-0-13"> 13</a></span>
 <span class="normal"><a href="#__codelineno-0-14"> 14</a></span>
 <span class="normal"><a href="#__codelineno-0-15"> 15</a></span>
@@ -2669,121 +2605,111 @@
 <span class="normal"><a href="#__codelineno-0-111">111</a></span>
 <span class="normal"><a href="#__codelineno-0-112">112</a></span>
 <span class="normal"><a href="#__codelineno-0-113">113</a></span>
-<span class="normal"><a href="#__codelineno-0-114">114</a></span>
-<span class="normal"><a href="#__codelineno-0-115">115</a></span>
-<span class="normal"><a href="#__codelineno-0-116">116</a></span>
-<span class="normal"><a href="#__codelineno-0-117">117</a></span>
-<span class="normal"><a href="#__codelineno-0-118">118</a></span>
-<span class="normal"><a href="#__codelineno-0-119">119</a></span>
-<span class="normal"><a href="#__codelineno-0-120">120</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="k">class</span> <span class="nc">VideoEntity</span><span class="p">:</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="sd">    A class representing a video entity.</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="sd">    Attributes:</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="sd">        id (Optional[uuid.UUID]): Unique identifier for the video. Defaults to None, will generate a UUID if not provided.</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="sd">        url (str): URL of the video. Required field.</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="sd">        created_at (Optional[datetime]): Date and time when the video was created. Defaults to the current time.</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="sd">        updated_at (Optional[datetime]): Date and time when the video was last updated. Defaults to None.</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a>
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a>    <span class="n">URL_REGEX</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;^(http|https)://&quot;</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-0-114">114</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">e2e</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="k">class</span> <span class="nc">TestCreateVideo</span><span class="p">:</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="sd">    End-to-end tests for the video creation feature in the FastAPI application.</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="sd">    This class contains test cases to verify the behavior of the</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="sd">    video creation endpoint. It ensures that the API correctly</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="sd">    handles the creation of a new video and returns the expected</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="sd">    response when provided with valid data.</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="sd">    Attributes:</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="sd">        client (TestClient): A FastAPI test client used for making</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="sd">                             requests to the API.</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="sd">    &quot;&quot;&quot;</span>
 <a id="__codelineno-0-24" name="__codelineno-0-24"></a>
-<a id="__codelineno-0-25" name="__codelineno-0-25"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a>        <span class="bp">self</span><span class="p">,</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a>        <span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28"></a>        <span class="nb">id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">uuid</span><span class="o">.</span><span class="n">UUID</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29"></a>        <span class="n">created_at</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30"></a>        <span class="n">updated_at</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31"></a>    <span class="p">):</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="sd">        Initializes a new instance of the VideoEntity class.</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34"></a>
-<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="sd">        Args:</span>
-<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="sd">            url (str): The URL of the video. Must start with http or https.</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="sd">            id (Optional[uuid.UUID]): Unique identifier for the video. If None, a UUID will be generated.</span>
-<a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="sd">            created_at (Optional[datetime]): The creation time of the video. Defaults to the current time.</span>
-<a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="sd">            updated_at (Optional[datetime]): The last updated time of the video. Defaults to None.</span>
-<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="sd">        &quot;&quot;&quot;</span>
-<a id="__codelineno-0-41" name="__codelineno-0-41"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_id</span> <span class="o">=</span> <span class="nb">id</span> <span class="ow">or</span> <span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">()</span>
-<a id="__codelineno-0-42" name="__codelineno-0-42"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">url</span>
-<a id="__codelineno-0-43" name="__codelineno-0-43"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_created_at</span> <span class="o">=</span> <span class="n">created_at</span> <span class="ow">or</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-<a id="__codelineno-0-44" name="__codelineno-0-44"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_updated_at</span> <span class="o">=</span> <span class="n">updated_at</span>
-<a id="__codelineno-0-45" name="__codelineno-0-45"></a>
-<a id="__codelineno-0-46" name="__codelineno-0-46"></a>    <span class="nd">@property</span>
-<a id="__codelineno-0-47" name="__codelineno-0-47"></a>    <span class="k">def</span> <span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">uuid</span><span class="o">.</span><span class="n">UUID</span><span class="p">:</span>
-<a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the unique identifier of the video.&quot;&quot;&quot;</span>
-<a id="__codelineno-0-49" name="__codelineno-0-49"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_id</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a>    <span class="k">def</span> <span class="nf">test_create_video</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client</span><span class="p">:</span> <span class="n">TestClient</span><span class="p">):</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="sd">        Test the creation of a video via the API.</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="sd">        This test sends a POST request to the /api/videos/ endpoint</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="sd">        with a valid video payload. It checks that the response status</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="sd">        code is 201 (Created) and verifies that the response message</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="sd">        and data are as expected.</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a>
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="sd">        Args:</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="sd">            client (TestClient): The FastAPI test client for sending</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="sd">                                 requests.</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="sd">        &quot;&quot;&quot;</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38"></a>        <span class="n">video_data</span> <span class="o">=</span> <span class="n">CreateVideoSchema</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://www.example.com/video&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39"></a>
+<a id="__codelineno-0-40" name="__codelineno-0-40"></a>        <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;api/videos/&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">video_data</span><span class="o">.</span><span class="n">model_dump</span><span class="p">())</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41"></a>
+<a id="__codelineno-0-42" name="__codelineno-0-42"></a>        <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="n">status</span><span class="o">.</span><span class="n">HTTP_201_CREATED</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43"></a>
+<a id="__codelineno-0-44" name="__codelineno-0-44"></a>        <span class="n">response_data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45"></a>        <span class="k">assert</span> <span class="p">(</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46"></a>            <span class="n">response_data</span><span class="p">[</span><span class="s2">&quot;message&quot;</span><span class="p">]</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47"></a>            <span class="o">==</span> <span class="n">SuccessMessagesEnum</span><span class="o">.</span><span class="n">VIDEO_CREATED_SUCCESS</span><span class="o">.</span><span class="n">value</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48"></a>        <span class="p">)</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49"></a>        <span class="k">assert</span> <span class="n">response_data</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">][</span><span class="s2">&quot;url&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">video_data</span><span class="o">.</span><span class="n">url</span>
 <a id="__codelineno-0-50" name="__codelineno-0-50"></a>
-<a id="__codelineno-0-51" name="__codelineno-0-51"></a>    <span class="nd">@id</span><span class="o">.</span><span class="n">setter</span>
-<a id="__codelineno-0-52" name="__codelineno-0-52"></a>    <span class="k">def</span> <span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">uuid</span><span class="o">.</span><span class="n">UUID</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the unique identifier of the video.&quot;&quot;&quot;</span>
-<a id="__codelineno-0-54" name="__codelineno-0-54"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_id</span> <span class="o">=</span> <span class="n">value</span> <span class="ow">or</span> <span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">()</span>
-<a id="__codelineno-0-55" name="__codelineno-0-55"></a>
-<a id="__codelineno-0-56" name="__codelineno-0-56"></a>    <span class="nd">@property</span>
-<a id="__codelineno-0-57" name="__codelineno-0-57"></a>    <span class="k">def</span> <span class="nf">url</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<a id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the URL of the video.&quot;&quot;&quot;</span>
-<a id="__codelineno-0-59" name="__codelineno-0-59"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_url</span>
-<a id="__codelineno-0-60" name="__codelineno-0-60"></a>
-<a id="__codelineno-0-61" name="__codelineno-0-61"></a>    <span class="nd">@url</span><span class="o">.</span><span class="n">setter</span>
-<a id="__codelineno-0-62" name="__codelineno-0-62"></a>    <span class="k">def</span> <span class="nf">url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a id="__codelineno-0-63" name="__codelineno-0-63"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-0-64" name="__codelineno-0-64"></a><span class="sd">        Sets the URL of the video with validation.</span>
-<a id="__codelineno-0-65" name="__codelineno-0-65"></a>
-<a id="__codelineno-0-66" name="__codelineno-0-66"></a><span class="sd">        Args:</span>
-<a id="__codelineno-0-67" name="__codelineno-0-67"></a><span class="sd">            value (str): The new URL of the video. Must be a valid URL starting with http or https.</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51"></a>    <span class="k">def</span> <span class="nf">test_create_duplicate_video</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client</span><span class="p">:</span> <span class="n">TestClient</span><span class="p">):</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="sd">        Test the creation of a duplicate video via the API.</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54"></a>
+<a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="sd">        This test attempts to create a video with a URL that</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56"></a><span class="sd">        already exists in the database. It checks that a</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="sd">        DuplicateUrlError is raised.</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58"></a>
+<a id="__codelineno-0-59" name="__codelineno-0-59"></a><span class="sd">        Args:</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60"></a><span class="sd">            client (TestClient): The FastAPI test client for sending</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61"></a><span class="sd">                                requests.</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62"></a><span class="sd">        &quot;&quot;&quot;</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63"></a>        <span class="n">video_data</span> <span class="o">=</span> <span class="n">CreateVideoSchema</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://www.example.com/video&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64"></a>
+<a id="__codelineno-0-65" name="__codelineno-0-65"></a>        <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;api/videos/&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">video_data</span><span class="o">.</span><span class="n">model_dump</span><span class="p">())</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66"></a>
+<a id="__codelineno-0-67" name="__codelineno-0-67"></a>        <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="n">status</span><span class="o">.</span><span class="n">HTTP_201_CREATED</span>
 <a id="__codelineno-0-68" name="__codelineno-0-68"></a>
-<a id="__codelineno-0-69" name="__codelineno-0-69"></a><span class="sd">        Raises:</span>
-<a id="__codelineno-0-70" name="__codelineno-0-70"></a><span class="sd">            (InvalidUrlError): If the URL is invalid.</span>
-<a id="__codelineno-0-71" name="__codelineno-0-71"></a><span class="sd">        &quot;&quot;&quot;</span>
-<a id="__codelineno-0-72" name="__codelineno-0-72"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">URL_REGEX</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
-<a id="__codelineno-0-73" name="__codelineno-0-73"></a>            <span class="k">raise</span> <span class="n">InvalidUrlError</span><span class="p">(</span>
-<a id="__codelineno-0-74" name="__codelineno-0-74"></a>                <span class="n">message</span><span class="o">=</span><span class="n">ErrorMessagesEnum</span><span class="o">.</span><span class="n">INVALID_URL</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;InvalidUrl&quot;</span>
-<a id="__codelineno-0-75" name="__codelineno-0-75"></a>            <span class="p">)</span>
-<a id="__codelineno-0-76" name="__codelineno-0-76"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_url</span> <span class="o">=</span> <span class="n">value</span>
-<a id="__codelineno-0-77" name="__codelineno-0-77"></a>
-<a id="__codelineno-0-78" name="__codelineno-0-78"></a>    <span class="nd">@property</span>
-<a id="__codelineno-0-79" name="__codelineno-0-79"></a>    <span class="k">def</span> <span class="nf">created_at</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">datetime</span><span class="p">:</span>
-<a id="__codelineno-0-80" name="__codelineno-0-80"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the creation timestamp of the video.&quot;&quot;&quot;</span>
-<a id="__codelineno-0-81" name="__codelineno-0-81"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_created_at</span>
+<a id="__codelineno-0-69" name="__codelineno-0-69"></a>        <span class="n">duplicate_response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+<a id="__codelineno-0-70" name="__codelineno-0-70"></a>            <span class="s2">&quot;api/videos/&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">video_data</span><span class="o">.</span><span class="n">model_dump</span><span class="p">()</span>
+<a id="__codelineno-0-71" name="__codelineno-0-71"></a>        <span class="p">)</span>
+<a id="__codelineno-0-72" name="__codelineno-0-72"></a>
+<a id="__codelineno-0-73" name="__codelineno-0-73"></a>        <span class="k">assert</span> <span class="n">duplicate_response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="n">status</span><span class="o">.</span><span class="n">HTTP_400_BAD_REQUEST</span>
+<a id="__codelineno-0-74" name="__codelineno-0-74"></a>        <span class="k">assert</span> <span class="p">(</span>
+<a id="__codelineno-0-75" name="__codelineno-0-75"></a>            <span class="n">duplicate_response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;detail&quot;</span><span class="p">]</span>
+<a id="__codelineno-0-76" name="__codelineno-0-76"></a>            <span class="o">==</span> <span class="n">ErrorMessagesEnum</span><span class="o">.</span><span class="n">DUPLICATE_URL</span><span class="o">.</span><span class="n">value</span>
+<a id="__codelineno-0-77" name="__codelineno-0-77"></a>        <span class="p">)</span>
+<a id="__codelineno-0-78" name="__codelineno-0-78"></a>
+<a id="__codelineno-0-79" name="__codelineno-0-79"></a>    <span class="k">def</span> <span class="nf">test_create_video_invalid_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client</span><span class="p">:</span> <span class="n">TestClient</span><span class="p">):</span>
+<a id="__codelineno-0-80" name="__codelineno-0-80"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-0-81" name="__codelineno-0-81"></a><span class="sd">        Test the creation of a video with an invalid URL via the API.</span>
 <a id="__codelineno-0-82" name="__codelineno-0-82"></a>
-<a id="__codelineno-0-83" name="__codelineno-0-83"></a>    <span class="nd">@created_at</span><span class="o">.</span><span class="n">setter</span>
-<a id="__codelineno-0-84" name="__codelineno-0-84"></a>    <span class="k">def</span> <span class="nf">created_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a id="__codelineno-0-85" name="__codelineno-0-85"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-0-86" name="__codelineno-0-86"></a><span class="sd">        Sets the creation timestamp of the video.</span>
-<a id="__codelineno-0-87" name="__codelineno-0-87"></a>
-<a id="__codelineno-0-88" name="__codelineno-0-88"></a><span class="sd">        Args:</span>
-<a id="__codelineno-0-89" name="__codelineno-0-89"></a><span class="sd">            value (Optional[datetime]): The new creation date and time. Defaults to the current time.</span>
+<a id="__codelineno-0-83" name="__codelineno-0-83"></a><span class="sd">        This test attempts to create a video with a malformed URL. It</span>
+<a id="__codelineno-0-84" name="__codelineno-0-84"></a><span class="sd">        checks that the API returns an error indicating that the URL</span>
+<a id="__codelineno-0-85" name="__codelineno-0-85"></a><span class="sd">        is invalid.</span>
+<a id="__codelineno-0-86" name="__codelineno-0-86"></a>
+<a id="__codelineno-0-87" name="__codelineno-0-87"></a><span class="sd">        Args:</span>
+<a id="__codelineno-0-88" name="__codelineno-0-88"></a><span class="sd">            client (TestClient): The FastAPI test client for sending</span>
+<a id="__codelineno-0-89" name="__codelineno-0-89"></a><span class="sd">                                 requests.</span>
 <a id="__codelineno-0-90" name="__codelineno-0-90"></a><span class="sd">        &quot;&quot;&quot;</span>
-<a id="__codelineno-0-91" name="__codelineno-0-91"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_created_at</span> <span class="o">=</span> <span class="n">value</span> <span class="ow">or</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<a id="__codelineno-0-91" name="__codelineno-0-91"></a>        <span class="n">video_data</span> <span class="o">=</span> <span class="n">CreateVideoSchema</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">&quot;invalid-url&quot;</span><span class="p">)</span>
 <a id="__codelineno-0-92" name="__codelineno-0-92"></a>
-<a id="__codelineno-0-93" name="__codelineno-0-93"></a>    <span class="nd">@property</span>
-<a id="__codelineno-0-94" name="__codelineno-0-94"></a>    <span class="k">def</span> <span class="nf">updated_at</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="p">]:</span>
-<a id="__codelineno-0-95" name="__codelineno-0-95"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the last updated timestamp of the video.&quot;&quot;&quot;</span>
-<a id="__codelineno-0-96" name="__codelineno-0-96"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_updated_at</span>
-<a id="__codelineno-0-97" name="__codelineno-0-97"></a>
-<a id="__codelineno-0-98" name="__codelineno-0-98"></a>    <span class="nd">@updated_at</span><span class="o">.</span><span class="n">setter</span>
-<a id="__codelineno-0-99" name="__codelineno-0-99"></a>    <span class="k">def</span> <span class="nf">updated_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">datetime</span><span class="p">):</span>
-<a id="__codelineno-0-100" name="__codelineno-0-100"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the updated_at timestamp.</span>
-<a id="__codelineno-0-101" name="__codelineno-0-101"></a>
-<a id="__codelineno-0-102" name="__codelineno-0-102"></a><span class="sd">        Args:</span>
-<a id="__codelineno-0-103" name="__codelineno-0-103"></a><span class="sd">            value (datetime): The new updated timestamp.</span>
-<a id="__codelineno-0-104" name="__codelineno-0-104"></a><span class="sd">        &quot;&quot;&quot;</span>
-<a id="__codelineno-0-105" name="__codelineno-0-105"></a>        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<a id="__codelineno-0-106" name="__codelineno-0-106"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_updated_at</span> <span class="o">=</span> <span class="n">value</span>
-<a id="__codelineno-0-107" name="__codelineno-0-107"></a>        <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-0-108" name="__codelineno-0-108"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_updated_at</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-<a id="__codelineno-0-109" name="__codelineno-0-109"></a>
-<a id="__codelineno-0-110" name="__codelineno-0-110"></a>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<a id="__codelineno-0-111" name="__codelineno-0-111"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-0-112" name="__codelineno-0-112"></a><span class="sd">        Returns a string representation of the VideoEntity instance.</span>
+<a id="__codelineno-0-93" name="__codelineno-0-93"></a>        <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/api/videos/&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">video_data</span><span class="o">.</span><span class="n">model_dump</span><span class="p">())</span>
+<a id="__codelineno-0-94" name="__codelineno-0-94"></a>
+<a id="__codelineno-0-95" name="__codelineno-0-95"></a>        <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="n">status</span><span class="o">.</span><span class="n">HTTP_400_BAD_REQUEST</span>
+<a id="__codelineno-0-96" name="__codelineno-0-96"></a>
+<a id="__codelineno-0-97" name="__codelineno-0-97"></a>        <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;detail&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">ErrorMessagesEnum</span><span class="o">.</span><span class="n">INVALID_URL</span><span class="o">.</span><span class="n">value</span>
+<a id="__codelineno-0-98" name="__codelineno-0-98"></a>
+<a id="__codelineno-0-99" name="__codelineno-0-99"></a>    <span class="k">def</span> <span class="nf">test_create_video_without_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client</span><span class="p">:</span> <span class="n">TestClient</span><span class="p">):</span>
+<a id="__codelineno-0-100" name="__codelineno-0-100"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-0-101" name="__codelineno-0-101"></a><span class="sd">        Test the creation of a video without a URL via the API.</span>
+<a id="__codelineno-0-102" name="__codelineno-0-102"></a>
+<a id="__codelineno-0-103" name="__codelineno-0-103"></a><span class="sd">        This test attempts to create a video with a missing URL. It</span>
+<a id="__codelineno-0-104" name="__codelineno-0-104"></a><span class="sd">        checks that the API returns an error indicating that the URL</span>
+<a id="__codelineno-0-105" name="__codelineno-0-105"></a><span class="sd">        is required.</span>
+<a id="__codelineno-0-106" name="__codelineno-0-106"></a>
+<a id="__codelineno-0-107" name="__codelineno-0-107"></a><span class="sd">        Args:</span>
+<a id="__codelineno-0-108" name="__codelineno-0-108"></a><span class="sd">            client (TestClient): The FastAPI test client for sending</span>
+<a id="__codelineno-0-109" name="__codelineno-0-109"></a><span class="sd">                                 requests.</span>
+<a id="__codelineno-0-110" name="__codelineno-0-110"></a><span class="sd">        &quot;&quot;&quot;</span>
+<a id="__codelineno-0-111" name="__codelineno-0-111"></a>
+<a id="__codelineno-0-112" name="__codelineno-0-112"></a>        <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/api/videos/&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="p">{})</span>
 <a id="__codelineno-0-113" name="__codelineno-0-113"></a>
-<a id="__codelineno-0-114" name="__codelineno-0-114"></a><span class="sd">        Returns:</span>
-<a id="__codelineno-0-115" name="__codelineno-0-115"></a><span class="sd">            str: A string that represents the video entity, including its id, URL, and timestamps.</span>
-<a id="__codelineno-0-116" name="__codelineno-0-116"></a><span class="sd">        &quot;&quot;&quot;</span>
-<a id="__codelineno-0-117" name="__codelineno-0-117"></a>        <span class="k">return</span> <span class="p">(</span>
-<a id="__codelineno-0-118" name="__codelineno-0-118"></a>            <span class="sa">f</span><span class="s2">&quot;VideoEntity(id=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">, url=&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="si">}</span><span class="s2">&#39;, &quot;</span>
-<a id="__codelineno-0-119" name="__codelineno-0-119"></a>            <span class="sa">f</span><span class="s2">&quot;created_at=&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">created_at</span><span class="si">}</span><span class="s2">&#39;, updated_at=&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">updated_at</span><span class="si">}</span><span class="s2">&#39;)&quot;</span>
-<a id="__codelineno-0-120" name="__codelineno-0-120"></a>        <span class="p">)</span>
+<a id="__codelineno-0-114" name="__codelineno-0-114"></a>        <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="n">status</span><span class="o">.</span><span class="n">HTTP_422_UNPROCESSABLE_ENTITY</span>
 </code></pre></div></td></tr></table></div>
               </details>
 
@@ -2797,108 +2723,23 @@
 
 
 
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="src.domain.entities.video.VideoEntity.created_at" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">created_at</span><span class="p">:</span> <span class="n">datetime</span></code>
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
-      <small class="doc doc-label doc-label-writable"><code>writable</code></small>
-  </span>
-
-</h3>
-
-
-    <div class="doc doc-contents ">
-
-        <p>Gets the creation timestamp of the video.</p>
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="src.domain.entities.video.VideoEntity.id" class="doc doc-heading">
-            <code class="highlight language-python"><span class="nb">id</span><span class="p">:</span> <span class="n">uuid</span><span class="o">.</span><span class="n">UUID</span></code>
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
-      <small class="doc doc-label doc-label-writable"><code>writable</code></small>
-  </span>
-
-</h3>
-
-
-    <div class="doc doc-contents ">
-
-        <p>Gets the unique identifier of the video.</p>
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="src.domain.entities.video.VideoEntity.updated_at" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">updated_at</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="p">]</span></code>
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
-      <small class="doc doc-label doc-label-writable"><code>writable</code></small>
-  </span>
-
-</h3>
-
-
-    <div class="doc doc-contents ">
-
-        <p>Gets the last updated timestamp of the video.</p>
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="src.domain.entities.video.VideoEntity.url" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">url</span><span class="p">:</span> <span class="nb">str</span></code>
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
-      <small class="doc doc-label doc-label-writable"><code>writable</code></small>
-  </span>
-
-</h3>
-
-
-    <div class="doc doc-contents ">
-
-        <p>Gets the URL of the video.</p>
-    </div>
-
-</div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-<h3 id="src.domain.entities.video.VideoEntity.__init__" class="doc doc-heading">
-            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">updated_at</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+<h3 id="tests.e2e.test_create_video.TestCreateVideo.test_create_duplicate_video" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">test_create_duplicate_video</span><span class="p">(</span><span class="n">client</span><span class="p">)</span></code>
 
 </h3>
 
 
     <div class="doc doc-contents ">
 
-        <p>Initializes a new instance of the VideoEntity class.</p>
+        <p>Test the creation of a duplicate video via the API.</p>
+<p>This test attempts to create a video with a URL that
+already exists in the database. It checks that a
+DuplicateUrlError is raised.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2913,66 +2754,133 @@
       </thead>
       <tbody>
           <tr class="doc-section-item">
-            <td><code>url</code></td>
+            <td><code>client</code></td>
             <td>
-                  <code>str</code>
+                  <code><span title="fastapi.testclient.TestClient">TestClient</span></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>The URL of the video. Must start with http or https.</p>
+                <p>The FastAPI test client for sending
+                requests.</p>
               </div>
             </td>
             <td>
                 <em>required</em>
             </td>
           </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>tests/e2e/test_create_video.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-51">51</a></span>
+<span class="normal"><a href="#__codelineno-0-52">52</a></span>
+<span class="normal"><a href="#__codelineno-0-53">53</a></span>
+<span class="normal"><a href="#__codelineno-0-54">54</a></span>
+<span class="normal"><a href="#__codelineno-0-55">55</a></span>
+<span class="normal"><a href="#__codelineno-0-56">56</a></span>
+<span class="normal"><a href="#__codelineno-0-57">57</a></span>
+<span class="normal"><a href="#__codelineno-0-58">58</a></span>
+<span class="normal"><a href="#__codelineno-0-59">59</a></span>
+<span class="normal"><a href="#__codelineno-0-60">60</a></span>
+<span class="normal"><a href="#__codelineno-0-61">61</a></span>
+<span class="normal"><a href="#__codelineno-0-62">62</a></span>
+<span class="normal"><a href="#__codelineno-0-63">63</a></span>
+<span class="normal"><a href="#__codelineno-0-64">64</a></span>
+<span class="normal"><a href="#__codelineno-0-65">65</a></span>
+<span class="normal"><a href="#__codelineno-0-66">66</a></span>
+<span class="normal"><a href="#__codelineno-0-67">67</a></span>
+<span class="normal"><a href="#__codelineno-0-68">68</a></span>
+<span class="normal"><a href="#__codelineno-0-69">69</a></span>
+<span class="normal"><a href="#__codelineno-0-70">70</a></span>
+<span class="normal"><a href="#__codelineno-0-71">71</a></span>
+<span class="normal"><a href="#__codelineno-0-72">72</a></span>
+<span class="normal"><a href="#__codelineno-0-73">73</a></span>
+<span class="normal"><a href="#__codelineno-0-74">74</a></span>
+<span class="normal"><a href="#__codelineno-0-75">75</a></span>
+<span class="normal"><a href="#__codelineno-0-76">76</a></span>
+<span class="normal"><a href="#__codelineno-0-77">77</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-51" name="__codelineno-0-51"></a><span class="k">def</span> <span class="nf">test_create_duplicate_video</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client</span><span class="p">:</span> <span class="n">TestClient</span><span class="p">):</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="sd">    Test the creation of a duplicate video via the API.</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54"></a>
+<a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="sd">    This test attempts to create a video with a URL that</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56"></a><span class="sd">    already exists in the database. It checks that a</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="sd">    DuplicateUrlError is raised.</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58"></a>
+<a id="__codelineno-0-59" name="__codelineno-0-59"></a><span class="sd">    Args:</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60"></a><span class="sd">        client (TestClient): The FastAPI test client for sending</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61"></a><span class="sd">                            requests.</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63"></a>    <span class="n">video_data</span> <span class="o">=</span> <span class="n">CreateVideoSchema</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://www.example.com/video&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64"></a>
+<a id="__codelineno-0-65" name="__codelineno-0-65"></a>    <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;api/videos/&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">video_data</span><span class="o">.</span><span class="n">model_dump</span><span class="p">())</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66"></a>
+<a id="__codelineno-0-67" name="__codelineno-0-67"></a>    <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="n">status</span><span class="o">.</span><span class="n">HTTP_201_CREATED</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68"></a>
+<a id="__codelineno-0-69" name="__codelineno-0-69"></a>    <span class="n">duplicate_response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+<a id="__codelineno-0-70" name="__codelineno-0-70"></a>        <span class="s2">&quot;api/videos/&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">video_data</span><span class="o">.</span><span class="n">model_dump</span><span class="p">()</span>
+<a id="__codelineno-0-71" name="__codelineno-0-71"></a>    <span class="p">)</span>
+<a id="__codelineno-0-72" name="__codelineno-0-72"></a>
+<a id="__codelineno-0-73" name="__codelineno-0-73"></a>    <span class="k">assert</span> <span class="n">duplicate_response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="n">status</span><span class="o">.</span><span class="n">HTTP_400_BAD_REQUEST</span>
+<a id="__codelineno-0-74" name="__codelineno-0-74"></a>    <span class="k">assert</span> <span class="p">(</span>
+<a id="__codelineno-0-75" name="__codelineno-0-75"></a>        <span class="n">duplicate_response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;detail&quot;</span><span class="p">]</span>
+<a id="__codelineno-0-76" name="__codelineno-0-76"></a>        <span class="o">==</span> <span class="n">ErrorMessagesEnum</span><span class="o">.</span><span class="n">DUPLICATE_URL</span><span class="o">.</span><span class="n">value</span>
+<a id="__codelineno-0-77" name="__codelineno-0-77"></a>    <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="tests.e2e.test_create_video.TestCreateVideo.test_create_video" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">test_create_video</span><span class="p">(</span><span class="n">client</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Test the creation of a video via the API.</p>
+<p>This test sends a POST request to the /api/videos/ endpoint
+with a valid video payload. It checks that the response status
+code is 201 (Created) and verifies that the response message
+and data are as expected.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
           <tr class="doc-section-item">
-            <td><code>id</code></td>
+            <td><code>client</code></td>
             <td>
-                  <code><span title="typing.Optional">Optional</span>[<span title="uuid.UUID">UUID</span>]</code>
+                  <code><span title="fastapi.testclient.TestClient">TestClient</span></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Unique identifier for the video. If None, a UUID will be generated.</p>
+                <p>The FastAPI test client for sending
+                 requests.</p>
               </div>
             </td>
             <td>
-                  <code>None</code>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code>created_at</code></td>
-            <td>
-                  <code><span title="typing.Optional">Optional</span>[<span title="datetime.datetime">datetime</span>]</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>The creation time of the video. Defaults to the current time.</p>
-              </div>
-            </td>
-            <td>
-                  <code>None</code>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code>updated_at</code></td>
-            <td>
-                  <code><span title="typing.Optional">Optional</span>[<span title="datetime.datetime">datetime</span>]</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>The last updated time of the video. Defaults to None.</p>
-              </div>
-            </td>
-            <td>
-                  <code>None</code>
+                <em>required</em>
             </td>
           </tr>
       </tbody>
     </table>
 
             <details class="quote">
-              <summary>Source code in <code>src/domain/entities/video.py</code></summary>
+              <summary>Source code in <code>tests/e2e/test_create_video.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-25">25</a></span>
 <span class="normal"><a href="#__codelineno-0-26">26</a></span>
 <span class="normal"><a href="#__codelineno-0-27">27</a></span>
@@ -2992,26 +2900,36 @@
 <span class="normal"><a href="#__codelineno-0-41">41</a></span>
 <span class="normal"><a href="#__codelineno-0-42">42</a></span>
 <span class="normal"><a href="#__codelineno-0-43">43</a></span>
-<span class="normal"><a href="#__codelineno-0-44">44</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a>    <span class="bp">self</span><span class="p">,</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a>    <span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28"></a>    <span class="nb">id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">uuid</span><span class="o">.</span><span class="n">UUID</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29"></a>    <span class="n">created_at</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30"></a>    <span class="n">updated_at</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="p">):</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="sd">    Initializes a new instance of the VideoEntity class.</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34"></a>
-<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="sd">    Args:</span>
-<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="sd">        url (str): The URL of the video. Must start with http or https.</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="sd">        id (Optional[uuid.UUID]): Unique identifier for the video. If None, a UUID will be generated.</span>
-<a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="sd">        created_at (Optional[datetime]): The creation time of the video. Defaults to the current time.</span>
-<a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="sd">        updated_at (Optional[datetime]): The last updated time of the video. Defaults to None.</span>
-<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-0-41" name="__codelineno-0-41"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">_id</span> <span class="o">=</span> <span class="nb">id</span> <span class="ow">or</span> <span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">()</span>
-<a id="__codelineno-0-42" name="__codelineno-0-42"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">url</span>
-<a id="__codelineno-0-43" name="__codelineno-0-43"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">_created_at</span> <span class="o">=</span> <span class="n">created_at</span> <span class="ow">or</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-<a id="__codelineno-0-44" name="__codelineno-0-44"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">_updated_at</span> <span class="o">=</span> <span class="n">updated_at</span>
+<span class="normal"><a href="#__codelineno-0-44">44</a></span>
+<span class="normal"><a href="#__codelineno-0-45">45</a></span>
+<span class="normal"><a href="#__codelineno-0-46">46</a></span>
+<span class="normal"><a href="#__codelineno-0-47">47</a></span>
+<span class="normal"><a href="#__codelineno-0-48">48</a></span>
+<span class="normal"><a href="#__codelineno-0-49">49</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="k">def</span> <span class="nf">test_create_video</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client</span><span class="p">:</span> <span class="n">TestClient</span><span class="p">):</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="sd">    Test the creation of a video via the API.</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="sd">    This test sends a POST request to the /api/videos/ endpoint</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="sd">    with a valid video payload. It checks that the response status</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="sd">    code is 201 (Created) and verifies that the response message</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="sd">    and data are as expected.</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a>
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="sd">    Args:</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="sd">        client (TestClient): The FastAPI test client for sending</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="sd">                             requests.</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38"></a>    <span class="n">video_data</span> <span class="o">=</span> <span class="n">CreateVideoSchema</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://www.example.com/video&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39"></a>
+<a id="__codelineno-0-40" name="__codelineno-0-40"></a>    <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;api/videos/&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">video_data</span><span class="o">.</span><span class="n">model_dump</span><span class="p">())</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41"></a>
+<a id="__codelineno-0-42" name="__codelineno-0-42"></a>    <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="n">status</span><span class="o">.</span><span class="n">HTTP_201_CREATED</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43"></a>
+<a id="__codelineno-0-44" name="__codelineno-0-44"></a>    <span class="n">response_data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45"></a>    <span class="k">assert</span> <span class="p">(</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46"></a>        <span class="n">response_data</span><span class="p">[</span><span class="s2">&quot;message&quot;</span><span class="p">]</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47"></a>        <span class="o">==</span> <span class="n">SuccessMessagesEnum</span><span class="o">.</span><span class="n">VIDEO_CREATED_SUCCESS</span><span class="o">.</span><span class="n">value</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48"></a>    <span class="p">)</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49"></a>    <span class="k">assert</span> <span class="n">response_data</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">][</span><span class="s2">&quot;url&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">video_data</span><span class="o">.</span><span class="n">url</span>
 </code></pre></div></td></tr></table></div>
             </details>
     </div>
@@ -3021,62 +2939,173 @@
 <div class="doc doc-object doc-function">
 
 
-<h3 id="src.domain.entities.video.VideoEntity.__repr__" class="doc doc-heading">
-            <code class="highlight language-python"><span class="fm">__repr__</span><span class="p">()</span></code>
+<h3 id="tests.e2e.test_create_video.TestCreateVideo.test_create_video_invalid_url" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">test_create_video_invalid_url</span><span class="p">(</span><span class="n">client</span><span class="p">)</span></code>
 
 </h3>
 
 
     <div class="doc doc-contents ">
 
-        <p>Returns a string representation of the VideoEntity instance.</p>
+        <p>Test the creation of a video with an invalid URL via the API.</p>
+<p>This test attempts to create a video with a malformed URL. It
+checks that the API returns an error indicating that the URL
+is invalid.</p>
 
 
-    <p><span class="doc-section-title">Returns:</span></p>
+<p><span class="doc-section-title">Parameters:</span></p>
     <table>
       <thead>
         <tr>
-<th>Name</th>          <th>Type</th>
+          <th>Name</th>
+          <th>Type</th>
           <th>Description</th>
+          <th>Default</th>
         </tr>
       </thead>
       <tbody>
           <tr class="doc-section-item">
-<td><code>str</code></td>            <td>
-                  <code>str</code>
+            <td><code>client</code></td>
+            <td>
+                  <code><span title="fastapi.testclient.TestClient">TestClient</span></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>A string that represents the video entity, including its id, URL, and timestamps.</p>
+                <p>The FastAPI test client for sending
+                 requests.</p>
               </div>
+            </td>
+            <td>
+                <em>required</em>
             </td>
           </tr>
       </tbody>
     </table>
 
             <details class="quote">
-              <summary>Source code in <code>src/domain/entities/video.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-110">110</a></span>
+              <summary>Source code in <code>tests/e2e/test_create_video.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-79">79</a></span>
+<span class="normal"><a href="#__codelineno-0-80">80</a></span>
+<span class="normal"><a href="#__codelineno-0-81">81</a></span>
+<span class="normal"><a href="#__codelineno-0-82">82</a></span>
+<span class="normal"><a href="#__codelineno-0-83">83</a></span>
+<span class="normal"><a href="#__codelineno-0-84">84</a></span>
+<span class="normal"><a href="#__codelineno-0-85">85</a></span>
+<span class="normal"><a href="#__codelineno-0-86">86</a></span>
+<span class="normal"><a href="#__codelineno-0-87">87</a></span>
+<span class="normal"><a href="#__codelineno-0-88">88</a></span>
+<span class="normal"><a href="#__codelineno-0-89">89</a></span>
+<span class="normal"><a href="#__codelineno-0-90">90</a></span>
+<span class="normal"><a href="#__codelineno-0-91">91</a></span>
+<span class="normal"><a href="#__codelineno-0-92">92</a></span>
+<span class="normal"><a href="#__codelineno-0-93">93</a></span>
+<span class="normal"><a href="#__codelineno-0-94">94</a></span>
+<span class="normal"><a href="#__codelineno-0-95">95</a></span>
+<span class="normal"><a href="#__codelineno-0-96">96</a></span>
+<span class="normal"><a href="#__codelineno-0-97">97</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-79" name="__codelineno-0-79"></a><span class="k">def</span> <span class="nf">test_create_video_invalid_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client</span><span class="p">:</span> <span class="n">TestClient</span><span class="p">):</span>
+<a id="__codelineno-0-80" name="__codelineno-0-80"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-0-81" name="__codelineno-0-81"></a><span class="sd">    Test the creation of a video with an invalid URL via the API.</span>
+<a id="__codelineno-0-82" name="__codelineno-0-82"></a>
+<a id="__codelineno-0-83" name="__codelineno-0-83"></a><span class="sd">    This test attempts to create a video with a malformed URL. It</span>
+<a id="__codelineno-0-84" name="__codelineno-0-84"></a><span class="sd">    checks that the API returns an error indicating that the URL</span>
+<a id="__codelineno-0-85" name="__codelineno-0-85"></a><span class="sd">    is invalid.</span>
+<a id="__codelineno-0-86" name="__codelineno-0-86"></a>
+<a id="__codelineno-0-87" name="__codelineno-0-87"></a><span class="sd">    Args:</span>
+<a id="__codelineno-0-88" name="__codelineno-0-88"></a><span class="sd">        client (TestClient): The FastAPI test client for sending</span>
+<a id="__codelineno-0-89" name="__codelineno-0-89"></a><span class="sd">                             requests.</span>
+<a id="__codelineno-0-90" name="__codelineno-0-90"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-91" name="__codelineno-0-91"></a>    <span class="n">video_data</span> <span class="o">=</span> <span class="n">CreateVideoSchema</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">&quot;invalid-url&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-92" name="__codelineno-0-92"></a>
+<a id="__codelineno-0-93" name="__codelineno-0-93"></a>    <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/api/videos/&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">video_data</span><span class="o">.</span><span class="n">model_dump</span><span class="p">())</span>
+<a id="__codelineno-0-94" name="__codelineno-0-94"></a>
+<a id="__codelineno-0-95" name="__codelineno-0-95"></a>    <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="n">status</span><span class="o">.</span><span class="n">HTTP_400_BAD_REQUEST</span>
+<a id="__codelineno-0-96" name="__codelineno-0-96"></a>
+<a id="__codelineno-0-97" name="__codelineno-0-97"></a>    <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;detail&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">ErrorMessagesEnum</span><span class="o">.</span><span class="n">INVALID_URL</span><span class="o">.</span><span class="n">value</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="tests.e2e.test_create_video.TestCreateVideo.test_create_video_without_url" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">test_create_video_without_url</span><span class="p">(</span><span class="n">client</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Test the creation of a video without a URL via the API.</p>
+<p>This test attempts to create a video with a missing URL. It
+checks that the API returns an error indicating that the URL
+is required.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>client</code></td>
+            <td>
+                  <code><span title="fastapi.testclient.TestClient">TestClient</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The FastAPI test client for sending
+                 requests.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>tests/e2e/test_create_video.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-99"> 99</a></span>
+<span class="normal"><a href="#__codelineno-0-100">100</a></span>
+<span class="normal"><a href="#__codelineno-0-101">101</a></span>
+<span class="normal"><a href="#__codelineno-0-102">102</a></span>
+<span class="normal"><a href="#__codelineno-0-103">103</a></span>
+<span class="normal"><a href="#__codelineno-0-104">104</a></span>
+<span class="normal"><a href="#__codelineno-0-105">105</a></span>
+<span class="normal"><a href="#__codelineno-0-106">106</a></span>
+<span class="normal"><a href="#__codelineno-0-107">107</a></span>
+<span class="normal"><a href="#__codelineno-0-108">108</a></span>
+<span class="normal"><a href="#__codelineno-0-109">109</a></span>
+<span class="normal"><a href="#__codelineno-0-110">110</a></span>
 <span class="normal"><a href="#__codelineno-0-111">111</a></span>
 <span class="normal"><a href="#__codelineno-0-112">112</a></span>
 <span class="normal"><a href="#__codelineno-0-113">113</a></span>
-<span class="normal"><a href="#__codelineno-0-114">114</a></span>
-<span class="normal"><a href="#__codelineno-0-115">115</a></span>
-<span class="normal"><a href="#__codelineno-0-116">116</a></span>
-<span class="normal"><a href="#__codelineno-0-117">117</a></span>
-<span class="normal"><a href="#__codelineno-0-118">118</a></span>
-<span class="normal"><a href="#__codelineno-0-119">119</a></span>
-<span class="normal"><a href="#__codelineno-0-120">120</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-110" name="__codelineno-0-110"></a><span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<a id="__codelineno-0-111" name="__codelineno-0-111"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-0-112" name="__codelineno-0-112"></a><span class="sd">    Returns a string representation of the VideoEntity instance.</span>
+<span class="normal"><a href="#__codelineno-0-114">114</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-99" name="__codelineno-0-99"></a><span class="k">def</span> <span class="nf">test_create_video_without_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client</span><span class="p">:</span> <span class="n">TestClient</span><span class="p">):</span>
+<a id="__codelineno-0-100" name="__codelineno-0-100"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-0-101" name="__codelineno-0-101"></a><span class="sd">    Test the creation of a video without a URL via the API.</span>
+<a id="__codelineno-0-102" name="__codelineno-0-102"></a>
+<a id="__codelineno-0-103" name="__codelineno-0-103"></a><span class="sd">    This test attempts to create a video with a missing URL. It</span>
+<a id="__codelineno-0-104" name="__codelineno-0-104"></a><span class="sd">    checks that the API returns an error indicating that the URL</span>
+<a id="__codelineno-0-105" name="__codelineno-0-105"></a><span class="sd">    is required.</span>
+<a id="__codelineno-0-106" name="__codelineno-0-106"></a>
+<a id="__codelineno-0-107" name="__codelineno-0-107"></a><span class="sd">    Args:</span>
+<a id="__codelineno-0-108" name="__codelineno-0-108"></a><span class="sd">        client (TestClient): The FastAPI test client for sending</span>
+<a id="__codelineno-0-109" name="__codelineno-0-109"></a><span class="sd">                             requests.</span>
+<a id="__codelineno-0-110" name="__codelineno-0-110"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-111" name="__codelineno-0-111"></a>
+<a id="__codelineno-0-112" name="__codelineno-0-112"></a>    <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/api/videos/&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="p">{})</span>
 <a id="__codelineno-0-113" name="__codelineno-0-113"></a>
-<a id="__codelineno-0-114" name="__codelineno-0-114"></a><span class="sd">    Returns:</span>
-<a id="__codelineno-0-115" name="__codelineno-0-115"></a><span class="sd">        str: A string that represents the video entity, including its id, URL, and timestamps.</span>
-<a id="__codelineno-0-116" name="__codelineno-0-116"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-0-117" name="__codelineno-0-117"></a>    <span class="k">return</span> <span class="p">(</span>
-<a id="__codelineno-0-118" name="__codelineno-0-118"></a>        <span class="sa">f</span><span class="s2">&quot;VideoEntity(id=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">, url=&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="si">}</span><span class="s2">&#39;, &quot;</span>
-<a id="__codelineno-0-119" name="__codelineno-0-119"></a>        <span class="sa">f</span><span class="s2">&quot;created_at=&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">created_at</span><span class="si">}</span><span class="s2">&#39;, updated_at=&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">updated_at</span><span class="si">}</span><span class="s2">&#39;)&quot;</span>
-<a id="__codelineno-0-120" name="__codelineno-0-120"></a>    <span class="p">)</span>
+<a id="__codelineno-0-114" name="__codelineno-0-114"></a>    <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="n">status</span><span class="o">.</span><span class="n">HTTP_422_UNPROCESSABLE_ENTITY</span>
 </code></pre></div></td></tr></table></div>
             </details>
     </div>
@@ -3145,10 +3174,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": [], "search": "../../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.525ec568.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mermaid@8.8.4/dist/mermaid.min.js"></script>
       

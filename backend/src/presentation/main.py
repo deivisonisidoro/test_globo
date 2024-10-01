@@ -7,18 +7,10 @@ from src.presentation.routers.router import router
 
 
 app = FastAPI()
-origins = [
-    "http://localhost:3000",
-    "http://nextjs:3000",
-    "http://test_globo_frontend-nextjs:3000",
-    "http://nextjs:81",
-    "http://localhost:81",
-    "http://test_globo_frontend-nextjs:81",
-]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

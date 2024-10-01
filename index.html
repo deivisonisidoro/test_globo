@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#teste-globo" class="md-skip">
+        <a href="#teste-tecnico-da-globo-backend-fastapi" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -299,9 +299,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tecnologias-utilizadas" class="md-nav__link">
+  <a href="#arquitetura-limpa" class="md-nav__link">
     <span class="md-ellipsis">
-      Tecnologias Utilizadas
+      Arquitetura Limpa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcionalidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funcionalidades
     </span>
   </a>
   
@@ -2303,9 +2312,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tecnologias-utilizadas" class="md-nav__link">
+  <a href="#arquitetura-limpa" class="md-nav__link">
     <span class="md-ellipsis">
-      Tecnologias Utilizadas
+      Arquitetura Limpa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcionalidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funcionalidades
     </span>
   </a>
   
@@ -2329,20 +2347,23 @@
   
 
 
-<h1 id="teste-globo">Teste Globo</h1>
-<p>Esta aplicação é um teste técnico da Globo que permite:</p>
+<h1 id="teste-tecnico-da-globo-backend-fastapi">Teste Técnico da Globo - Backend FastAPI</h1>
+<p>Este projeto é um backend desenvolvido em FastAPI que permite inserir, armazenar, listar, recuperar e deletar URLs do YouTube. A aplicação foi criada como parte de um teste técnico para a Globo.</p>
+<h2 id="arquitetura-limpa">Arquitetura Limpa</h2>
+<p>Foquei em construir uma <strong>arquitetura limpa</strong> para esta aplicação, seguindo os princípios de separação de preocupações e modularidade. A arquitetura limpa traz os seguintes benefícios:</p>
 <ul>
-<li>Inserir e armazenar uma URL do YouTube.</li>
-<li>Listar as URLs salvas.</li>
-<li>Recuperar a URL e tocar através da solução.</li>
-<li>Deletar a URL.</li>
+<li><strong>Manutenibilidade</strong>: A estrutura organizada do código facilita a identificação e correção de problemas, permitindo que desenvolvedores trabalhem de forma mais eficiente.</li>
+<li><strong>Testabilidade</strong>: Com a separação de responsabilidades, cada componente da aplicação pode ser testado de forma isolada, aumentando a cobertura de testes e a confiabilidade do software.</li>
+<li><strong>Escalabilidade</strong>: Uma arquitetura bem projetada permite que a aplicação cresça facilmente. Novas funcionalidades podem ser adicionadas sem impactar outras partes do sistema.</li>
+<li><strong>Flexibilidade</strong>: Alterações em um componente têm pouco ou nenhum impacto em outros, permitindo adaptações rápidas às necessidades do negócio.</li>
 </ul>
-<h2 id="tecnologias-utilizadas">Tecnologias Utilizadas</h2>
+<h2 id="funcionalidades">Funcionalidades</h2>
+<p>A aplicação oferece as seguintes funcionalidades:</p>
 <ul>
-<li><strong>Backend:</strong> FastAPI, PostgreSQL</li>
-<li><strong>Frontend:</strong> Next.js, Tailwind CSS, Shadcn, Lucide, React Hook Form, Zod</li>
-<li><strong>Testes:</strong> pytest, incluindo testes unitários, de integração e e2e.</li>
-<li><strong>Gerenciador de Pacotes:</strong> pnpm</li>
+<li><strong>Inserir e armazenar uma URL do YouTube</strong>: Você pode adicionar novas URLs do YouTube ao banco de dados.</li>
+<li><strong>Listar as URLs salvas</strong>: A aplicação pode retornar todas as URLs armazenadas.</li>
+<li><strong>Recuperar a URL e tocar através da solução</strong>: É possível recuperar uma URL específica e reproduzi-la.</li>
+<li><strong>Deletar a URL</strong>: Você pode remover uma URL do banco de dados.</li>
 </ul>
 
 

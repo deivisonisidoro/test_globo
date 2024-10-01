@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  nextjs:
+    container_name: nextjs_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      NEXT_PUBLIC_API_URL: http://test_globo_backend-fastapi:80 # URL do backend FastAPI
+    ports:
+      - "8081:8081" # Porta do Next.js acessível localmente
+    networks:
+      - app-network
+    volumes:
+      - .:/app
+
+networks:
+  app-network:
+    driver: bridge

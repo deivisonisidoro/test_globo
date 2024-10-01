@@ -23,7 +23,7 @@ theme:
 
 nav:
   - Home: index.md
-  - Architecture: architecture.md
+  - Arquitetura do Projeto: architecture.md
   - ...
 
 markdown_extensions:

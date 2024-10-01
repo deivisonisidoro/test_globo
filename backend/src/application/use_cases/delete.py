@@ -1,4 +1,3 @@
-from src.domain.dtos.video_response import VideoResponseDTO
 from src.domain.enums.error_messages import ErrorMessagesEnum
 from src.domain.enums.success_messages import SuccessMessagesEnum
 from src.domain.exceptions.validation_error.video_not_found_error import (
@@ -26,10 +25,10 @@ class DeleteVideoUseCase(AbstractDeleteVideoUseCase):
             id (str): The ID of the video to delete.
 
         Returns:
-            VideoResponseDTO: The DTO containing the status code and message.
+            SuccessMessagesEnum: The DTO containing the status code and message.
 
         Raises:
-            VideoNotFoundError: If no video with the given URL exists.
+            (str): A success message
         """
         video = self.video_repository.find_by_id(id)
 

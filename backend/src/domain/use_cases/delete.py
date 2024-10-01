@@ -1,13 +1,11 @@
 from abc import ABC, abstractmethod
 
-from src.domain.dtos.video_response import VideoResponseDTO
-
 
 class AbstractDeleteVideoUseCase(ABC):
     """Abstract base class for deleting a video by URL."""
 
     @abstractmethod
-    def execute(self, id: str) -> VideoResponseDTO:
+    def execute(self, id: str) -> str:
         """Executes the use case to delete a video by its ID.
 
         Args:

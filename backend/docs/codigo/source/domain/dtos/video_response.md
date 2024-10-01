@@ -1,1 +1,0 @@
-::: src.domain.dtos.video_response

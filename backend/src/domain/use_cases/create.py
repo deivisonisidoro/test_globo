@@ -18,7 +18,7 @@ class AbstractCreateVideoUseCase(ABC):
             url (str): The URL of the video to create.
 
         Returns:
-            VideoResponseDTO: The DTO containing the status code and created video entity.
+            VideoEntity: A video entity instance
 
         Raises:
             InvalidUrlError: If the URL is invalid or a video with the same URL already exists.

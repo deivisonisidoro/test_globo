@@ -24,7 +24,7 @@ class ReadAllVideosUseCase(AbstractReadAllVideosUseCase):
         """Fetches all videos from the repository.
 
         Returns:
-            (VideoResponseDTO): The DTO containing the status code and list of video entities.
+            (List[VideoEntity]): A video entity list
 
         Raises:
             VideoNotFoundError: If no videos are found in the repository.

@@ -89,3 +89,23 @@ Para executar testes específicos, utilize os markers definidos nas pastas de te
 ```bash
 pytest -m "unit"
 ```
+
+## Documentação com MkDocs
+
+A documentação deste projeto foi gerada usando o MkDocs com o tema Material. Ela permite visualizar todas as informações detalhadas sobre o código e a arquitetura da aplicação.
+
+### Visualizando a Documentação Publicada
+
+Você pode acessar a documentação completa e publicada deste projeto através do link:
+
+**[Documentação MkDocs](https://deivisonisidoro.github.io/test_globo/)**
+
+### Visualizando a Documentação Localmente
+
+1. **Inicie o Servidor de Desenvolvimento**: Execute o seguinte comando na pasta do seu projeto:
+
+   ```bash
+   mkdocs serve
+   ```
+
+Após isso, a documentação estará disponível no GitHub Pages.

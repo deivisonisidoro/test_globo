@@ -85,7 +85,6 @@ Após a implantação, você poderá acessar sua aplicação nos seguintes ender
 
 - **Frontend**: [http://localhost:3000](http://localhost:3000)
 - **Backend**: [http://localhost:8080](http://localhost:8080)
-- **Nginx**: [http://localhost:80](http://localhost:80)
 
 ## Configurações do Kubernetes
 

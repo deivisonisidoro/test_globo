@@ -1,9 +1,13 @@
+
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+console.log(apiUrl);
 
 
 export const addVideo = async (url: string) => {
-  
+  console.log(apiUrl);
+
   if (!apiUrl) {
+    console.error("API URL:", apiUrl);
     throw new Error("API URL is not defined");
   }
 
@@ -30,6 +34,8 @@ export const addVideo = async (url: string) => {
 };
 
 export const listVideos = async () => {
+  console.log(apiUrl);
+
   if (!apiUrl) {
     throw new Error("API URL is not defined");
   }

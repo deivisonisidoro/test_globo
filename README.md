@@ -2,6 +2,17 @@
 
 Este é um monorepo que contém dois projetos: um backend em FastAPI e um frontend em Next.js. O objetivo deste repositório é fornecer uma solução completa para inserção, armazenamento, recuperação e deleção de URLs do YouTube.
 
+## Notas de Versão
+
+Para visualizar as notas de versão detalhadas, incluindo funcionalidades, bugs, observações e pontos de melhoria, acesse [Release Notes](release_notes.md).
+
+## Documentação Adicional
+
+Para mais detalhes sobre cada projeto, consulte os READMEs individuais:
+
+- **[Backend (FastAPI)](backend/README.md)**: Instruções e informações sobre o projeto backend.
+- **[Frontend (Next.js)](frontend/README.md)**: Instruções e informações sobre o projeto frontend.
+
 ## Clonando o Projeto
 
 Para clonar este projeto, utilize o seguinte comando:
@@ -98,10 +109,3 @@ Foram criados workflows para automatizar o processo de integração contínua (C
 - **Backend**: Os workflows do backend estão localizados em:
   - `backend/.github/workflows/deploy-to-eks.yml`
   - `backend/.github/workflows/python-tests.yml`
-
-## Documentação Adicional
-
-Para mais detalhes sobre cada projeto, consulte os READMEs individuais:
-
-- **[Backend (FastAPI)](backend/README.md)**: Instruções e informações sobre o projeto backend.
-- **[Frontend (Next.js)](frontend/README.md)**: Instruções e informações sobre o projeto frontend.

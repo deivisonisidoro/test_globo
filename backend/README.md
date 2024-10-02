@@ -33,7 +33,7 @@ A aplicação oferece as seguintes funcionalidades:
 
 Antes de começar, você precisará ter o seguinte instalado em sua máquina:
 
-- [Poetry](https://python-poetry.org/docs/#installation)
+- [Poetry](https://python-poetry.org/docs/#installation) ou [pip](https://pip.pypa.io/en/stable/installation/)
 - **PostgreSQL**: A aplicação requer um banco de dados PostgreSQL, que pode ser instalado localmente ou executado via Docker.
 
 ### Executando PostgreSQL via Docker
@@ -46,6 +46,8 @@ docker run --name postgres_db -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=pas
 
 ## Rodando Localmente
 
+### Com Poetry
+
 1. **Instalar Dependências com Poetry:**
 
    ```bash
@@ -57,6 +59,34 @@ docker run --name postgres_db -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=pas
    ```bash
    poetry run uvicorn src/presentation/main.py --host 0.0.0.0 --port 8000 --reload
    ```
+
+### Com Pip
+
+Caso você prefira utilizar o `pip` em vez do `Poetry`, siga os passos abaixo:
+
+1. **Crie e ative um ambiente virtual** (recomendado):
+
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # No Windows, use `venv\Scripts\activate`
+   ```
+
+2. **Instale as dependências**:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Execute a aplicação**:
+
+   ```bash
+   uvicorn src/presentation/main.py --host 0.0.0.0 --port 8000 --reload
+   ```
+
+> **Nota**: Para gerar o arquivo `requirements.txt` se você está utilizando o `Poetry`, execute o comando:
+> ```bash
+> poetry export -f requirements.txt --output requirements.txt
+> ```
 
 ## Swagger e Redoc
 

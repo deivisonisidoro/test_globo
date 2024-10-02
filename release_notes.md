@@ -18,3 +18,4 @@
 - Incluir mais documentação, como Storybook no frontend.
 - Realizar mais testes no frontend.
 - **Teste do Workflow**: Não consegui testar o workflow por não ter uma conta da Amazon, o que impede a validação do funcionamento completo.
+- Adicionar paginação ao listar todos videos

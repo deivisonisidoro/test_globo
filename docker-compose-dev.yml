@@ -15,7 +15,6 @@ services:
 
   nextjs:
     container_name: nextjs_app
-    image: deivisonisidoro/nextjs_app:latest
     build:
       context: ./frontend
       dockerfile: Dockerfile
@@ -23,10 +22,11 @@ services:
       NEXT_PUBLIC_API_URL: http://fastapi:8080
     ports:
       - "3000:3000"
+    networks:
+      - app-network
 
   fastapi:
     container_name: fastapi_app
-    image: deivisonisidoro/fastapi_app:latest
     build:
       context: ./backend
       dockerfile: Dockerfile
@@ -40,7 +40,7 @@ services:
       - app-network
     volumes:
       - ./backend:/app
-    command: sh -c "alembic upgrade head && fastapi run src/presentation/main.py --proxy-headers --port 8080"
+    command: sh -c "alembic upgrade head && fastapi run src/presentation/main.py  --port 8080"
 
 volumes:
   postgres_data:

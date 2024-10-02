@@ -15,4 +15,4 @@ COPY . /app
 
 EXPOSE 8080
 
-CMD ["fastapi", "run", "src/presentation/main.py", "--port", "8080"]
+CMD ["fastapi", "run", "src/presentation/main.py", "--proxy-headers", "--port", "8080"]

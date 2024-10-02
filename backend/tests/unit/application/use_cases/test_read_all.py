@@ -26,6 +26,7 @@ class TestReadAllVideosUseCase:
     def test_read_all_videos_success(self):
         """Test case when videos are found in the repository."""
         video1 = VideoFactory.create(url="http://example.com/video1")
+        video2 = VideoFactory.create(url="http://example.com/video2")
         self.mock_video_repository.find_all.return_value = [video1, video2]
 
         response = self.use_case.execute()

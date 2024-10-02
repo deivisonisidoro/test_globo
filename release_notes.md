@@ -6,6 +6,7 @@
 - Listar as URLs salvas.
 - Recuperar a URL e tocar através da solução.
 - Deletar a URL.
+- Suporte para temas para dark ou light.
 
 ## Bugs ou Observações
 

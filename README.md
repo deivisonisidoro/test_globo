@@ -41,7 +41,7 @@ Para executar o projeto utilizando Docker Compose, siga os passos abaixo:
 
 ### Acessando a Aplicação
 
-- **Frontend**: A aplicação frontend estará disponível em [http://localhost:8081](http://localhost:8081).
+- **Frontend**: A aplicação frontend estará disponível em [http://localhost:3000](http://localhost:3000).
 - **Backend**: A API do backend estará disponível em [http://localhost:8080](http://localhost:8080).
 - **Nginx**: O Nginx, que serve como um proxy reverso, estará disponível em [http://localhost:3050](http://localhost:3050).
 
@@ -83,7 +83,7 @@ Para publicar a aplicação, utilize o Docker Compose para construir e implantar
 
 Após a implantação, você poderá acessar sua aplicação nos seguintes endereços:
 
-- **Frontend**: [http://localhost:8081](http://localhost:8081)
+- **Frontend**: [http://localhost:3000](http://localhost:3000)
 - **Backend**: [http://localhost:8080](http://localhost:8080)
 - **Nginx**: [http://localhost:80](http://localhost:80)
 

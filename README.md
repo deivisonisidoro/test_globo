@@ -36,7 +36,68 @@ Para executar o projeto utilizando Docker Compose, siga os passos abaixo:
 
 ## Publicação
 
-Caso você deseje publicar a aplicação frontend, será necessário substituir o `Dockerfile` padrão pelo `Dockerfile.deploy` localizado na pasta do frontend. Este arquivo está configurado para otimizar a construção da aplicação para produção.
+Para publicar a aplicação, utilize o Docker Compose para construir e implantar os serviços de forma simplificada. Siga as instruções abaixo:
+
+### Construção e Publicação com Docker Compose
+
+1. **Construir as Imagens Docker**:
+
+   Para construir todas as imagens definidas no arquivo `docker-compose.yml`, execute o seguinte comando:
+
+   ```bash
+   docker-compose build
+   ```
+
+2. **Publicar as Imagens no Docker Hub**:
+
+   Após a construção das imagens, você pode publicá-las no Docker Hub usando:
+
+   ```bash
+   docker-compose push
+   ```
+
+   **Observação**: Certifique-se de que suas imagens estão configuradas corretamente no `docker-compose.yml` com os nomes apropriados para o Docker Hub.
+
+3. **Implantar no Kubernetes**:
+
+   Se você já tiver configurado seu cluster Kubernetes, aplique as configurações contidas na pasta `k8s` com o seguinte comando:
+
+   ```bash
+   kubectl apply -f k8s
+   ```
+
+   **Nota**: Para implantar em um cluster Kubernetes, você pode usar serviços como Google Kubernetes Engine (GKE), Amazon EKS, ou configurar um cluster local com Minikube ou Kind. Consulte a [documentação do Kubernetes](https://kubernetes.io/docs/setup/) para mais informações sobre como criar e configurar um cluster.
+
+### Acesso à Aplicação
+
+Após a implantação, você poderá acessar sua aplicação nos seguintes endereços:
+
+- **Frontend**: [http://localhost:8081](http://localhost:8081)
+- **Backend**: [http://localhost:8080](http://localhost:8080)
+- **Nginx**: [http://localhost:80](http://localhost:80)
+
+## Configurações do Kubernetes
+
+Uma pasta chamada `k8s` foi adicionada ao projeto, contendo os arquivos de configuração do Kubernetes. Esses arquivos são usados para implantar e gerenciar a aplicação no cluster Kubernetes.
+
+### Estrutura da Pasta k8s
+
+- **configmap.yaml**: Configuração para variáveis de ambiente e configurações do aplicativo.
+- **db-deployment.yaml**: Configuração para o deployment do banco de dados.
+- **fastapi-deployment.yaml**: Configuração para o deployment do backend (FastAPI).
+- **ingress-service.yml**: Configuração para expor os serviços através do Ingress.
+- **nextjs-deployment.yaml**: Configuração para o deployment do frontend (Next.js).
+
+## Workflows
+
+Foram criados workflows para automatizar o processo de integração contínua (CI) dos projetos de frontend e backend. Esses workflows estão configurados para rodar testes e outras ações em cada push ou pull request.
+
+### Estrutura dos Workflows
+
+- **Frontend**: O workflow do frontend está localizado em `frontend/.github/workflows/deploy-to-eks.yml`.
+- **Backend**: Os workflows do backend estão localizados em:
+  - `backend/.github/workflows/deploy-to-eks.yml`
+  - `backend/.github/workflows/python-tests.yml`
 
 ## Documentação Adicional
 
@@ -44,4 +105,3 @@ Para mais detalhes sobre cada projeto, consulte os READMEs individuais:
 
 - **[Backend (FastAPI)](backend/README.md)**: Instruções e informações sobre o projeto backend.
 - **[Frontend (Next.js)](frontend/README.md)**: Instruções e informações sobre o projeto frontend.
-

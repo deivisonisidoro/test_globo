@@ -90,9 +90,9 @@ Caso você prefira utilizar o `pip` em vez do `Poetry`, siga os passos abaixo:
 
 ## Swagger e Redoc
 
-A aplicação inclui uma interface do Swagger para visualizar e testar as rotas da API. Acesse [http://localhost:8000/redoc](http://localhost:8000/redoc) para interagir com a API.
+A aplicação inclui uma interface do Swagger para visualizar e testar as rotas da API. Acesse [http://localhost:8000/swagger/redoc](http://localhost:8000/swagger/redoc) para interagir com a API.
 
-Além disso, você pode acessar a documentação Redoc da API em [http://localhost:8000/doc](http://localhost:8000/doc) para uma visualização mais detalhada.
+Além disso, você pode acessar a documentação Redoc da API em [http://localhost:8000/swagger/doc](http://localhost:8000/swagger/doc) para uma visualização mais detalhada.
 
 ## Testes
 

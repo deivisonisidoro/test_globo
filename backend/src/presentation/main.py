@@ -8,7 +8,7 @@ from starlette.responses import RedirectResponse
 
 
 
-app = FastAPI(title="English Course API", version="0.0.1", docs_url="/swagger/doc", redoc_url="/swagger/redoc")
+app = FastAPI(title="Teste Técnico Globo - Backend FastAPI", version="0.0.1", docs_url="/swagger/doc", redoc_url="/swagger/redoc")
 
 
 app.add_middleware(
